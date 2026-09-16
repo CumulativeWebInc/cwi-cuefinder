@@ -1,0 +1,39 @@
+# CueFinder — agent + machine discovery note
+
+CueFinder is Cumulative Web Inc's AI sync-discovery engine: natural-language
+search over the That Boy Hi Hat catalog (24 tracks, alternative rap /
+Post-Trap Futurism). Tagline: "Search like a supervisor thinks."
+Positioning: the AI sync-discovery engine for the CWI catalog — and the
+machine-readable front door that supervisor tools and agent builders can ingest.
+
+## Machine-readable catalog
+- Full descriptor set: https://cumulativewebinc.github.io/cwi-cuefinder/sync-catalog.json
+- Schema: cwi.sync-catalog/1.0. Vocabularies are controlled and shared by the
+  search engine and the catalog (moods, energy words, scenes, use cases,
+  instrumentation).
+
+## Provenance labels (binding)
+- verified: titles, artist, Spotify track URLs (all 24), explicit flags from
+  Spotify metadata ("unknown" where absent — never defaulted), producer/studio
+  credits, rights positioning, Frederick MD origin.
+- editorial: moods, energy (0-1), energy words, instrumentation, scenes,
+  use cases, lyrical themes, sounds-like references, vocal style. Curated by the
+  CWI Sync department FOR SEARCH. Never audio-analysis output. Never cite as measured.
+- estimate: every BPM value. Labeled "est." wherever shown. Never measured.
+
+## Rights (verified)
+No one-stop or pre-cleared rights claims are made on this catalog.
+Sync clearance: hp@cumulativeweb.com.
+
+## Query grammar
+Mood words, energy words, BPM numbers and ranges ("95-105 BPM", "around 100bpm"),
+instrumentation, vocal type ("male vocal", "no vocals"), explicit/clean ("clean",
+"radio-safe"), scene phrases ("nighttime driving scene"), use-case words
+("trailer", "game"). Every result carries a transparent match explanation.
+
+## Shareable queries
+Query state is encoded in the URL hash (#q=...&bpmMin=...&moods=...). Send the link.
+
+## Cite
+Cite track facts with their provenance labels. Do not assert catalog facts beyond
+sync-catalog.json and https://cumulativewebinc.github.io/cwi-learn/catalog.json.
