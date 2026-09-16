@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CueFinder — AI Sync Discovery for the CWI Catalog</title>
+<meta name="description" content="CueFinder: natural-language sync discovery over the That Boy Hi Hat catalog. Search the way music supervisors search — mood, energy, BPM, scene. Machine-readable catalog for AI agents.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand"><span class="logo">◉</span> CueFinder</div>
+    <h1>Search the catalog the way supervisors search.</h1>
+    <p class="sub">Natural-language sync discovery over the <strong>That Boy Hi Hat</strong> catalog —
+      mood, energy, BPM, instrumentation, scene. Built for music supervisors, sync teams, and the AI agents that find music for them.</p>
+    <div class="searchbar">
+      <input id="q" type="text" autocomplete="off" spellcheck="false"
+        placeholder='Try: "dark futuristic alt-rap, nighttime driving scene, 95–105 BPM, male vocal, cinematic, clean"'>
+      <button id="go">Find cues</button>
+    </div>
+    <div class="chips" id="example-chips"></div>
+    <div class="parsed" id="parsed" hidden></div>
+  </div>
+</header>
+
+<main>
+  <aside class="filters" id="filters">
+    <h2>Filters</h2>
+    <div class="fgroup">
+      <label>BPM range <span class="est">(est.)</span></label>
+      <div class="bpmrow">
+        <input type="range" id="bpmMin" min="60" max="160" value="60">
+        <input type="range" id="bpmMax" min="60" max="160" value="160">
+      </div>
+      <div class="bpmval"><span id="bpmMinVal">60</span> – <span id="bpmMaxVal">160</span> BPM</div>
+    </div>
+    <div class="fgroup">
+      <label for="energy">Energy</label>
+      <select id="energy">
+        <option value="any">Any</option><option value="low">Low (1–4)</option>
+        <option value="mid">Mid (4–7)</option><option value="high">High (7–10)</option>
+      </select>
+    </div>
+    <div class="fgroup">
+      <label>Moods <span class="est">(editorial)</span></label>
+      <div class="moodchips" id="moodchips"></div>
+    </div>
+    <div class="fgroup"><label for="vocal">Vocal</label>
+      <select id="vocal"><option value="any">Any</option><option value="male">Male vocal</option><option value="instrumental">Instrumental</option></select>
+    </div>
+    <div class="fgroup"><label for="cleanreq">Lyrics</label>
+      <select id="cleanreq"><option value="any">Any</option><option value="clean">Clean</option><option value="explicit">Explicit</option></select>
+    </div>
+    <div class="fgroup">
+      <label>Scene presets</label>
+      <div class="scenebtns" id="scenebtns"></div>
+    </div>
+    <button class="clear" id="clear">Clear all</button>
+  </aside>
+
+  <section class="results">
+    <div class="reshead"><span id="count"></span><button id="copylink" class="linkbtn">Copy shareable link</button></div>
+    <div id="cards"></div>
+  </section>
+</main>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-card">
+    <button class="sheet-close" id="sheet-close">✕</button>
+    <div id="sheet-body"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="honesty">
+    <h3>Data honesty</h3>
+    <ul>
+      <li><strong>Verified:</strong> track titles, artist, Spotify links, explicit flags (Spotify metadata), producer/studio credits marked verified.</li>
+      <li><strong>Editorial:</strong> mood, energy, instrumentation, and scene tags are curated by the CWI Sync department for search — not audio-analysis output.</li>
+      <li><strong>BPM:</strong> all values are <em>estimates</em>, labeled <span class="est">est.</span> — never measured.</li>
+      <li><strong>Rights:</strong> no one-stop or pre-cleared rights claims are made. Every placement clears directly via <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a>.</li>
+    </ul>
+    <p class="machine">Machine-readable catalog: <a href="sync-catalog.json">sync-catalog.json</a> ·
+      agent discovery note: <a href="llms.txt">llms.txt</a> ·
+      source data: <a href="https://cumulativewebinc.github.io/cwi-learn/catalog.json">cwi-learn catalog.json</a></p>
+  </div>
+  <p class="fine">CueFinder · Cumulative Web Inc · That Boy Hi Hat — Alternative Rap Complete Catalog (24 tracks) · Frederick, MD</p>
+</footer>
+
+<script src="catalog.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
