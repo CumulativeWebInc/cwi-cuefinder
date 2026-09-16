@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CueFinder — Brand</title>
+<meta name="description" content="CueFinder brand tokens: palette, typography, mark, voice, provenance labels.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); margin: 0; padding: 40px 24px; }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-family: var(--font-brand); font-size: 34px; margin: 18px 0 6px; }
+  h1 em { font-style: normal; color: var(--amber); }
+  h2 { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; color: var(--mut); margin: 30px 0 12px; }
+  p.sub { color: var(--mut); }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .sw { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .sw i { display: block; height: 64px; }
+  .sw span { display: block; font-family: var(--font-mono); font-size: 11.5px; padding: 8px 10px; color: var(--mut); }
+  .sw span b { color: var(--ink); display: block; font-size: 12.5px; }
+  .type-row { border: 1px solid var(--hairline); border-radius: 8px; padding: 16px; margin-bottom: 10px; }
+  .type-row .a { font-family: var(--font-brand); font-size: 22px; font-weight: 700; }
+  .type-row .b { font-family: var(--font-mono); font-size: 14px; color: var(--green); }
+  .type-row .c { font-size: 14px; color: var(--mut); }
+  .type-row small { font-family: var(--font-mono); font-size: 11px; color: var(--mut); display: block; margin-top: 6px; }
+  code { font-family: var(--font-mono); color: var(--amber); font-size: 12.5px; }
+  ul.voice { color: var(--mut); font-size: 14px; line-height: 1.7; padding-left: 20px; }
+  .back { font-family: var(--font-mono); font-size: 12.5px; }
+  img.og { width: 100%; border: 1px solid var(--line); border-radius: 8px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="../">← CueFinder</a></p>
+  <img src="cuefinder-mark.png" alt="CueFinder groove-crosshair mark" width="64" height="64">
+  <h1>CUE<em>FINDER</em> — brand</h1>
+  <p class="sub">2AM at the supervisor's desk. Terse, technical, honest. No hype. No exclamation points.</p>
+
+  <h2>PALETTE</h2>
+  <div class="swatches">
+    <div class="sw"><i style="background:#0A0C10"></i><span><b>background</b>#0A0C10</span></div>
+    <div class="sw"><i style="background:#12151C"></i><span><b>panel</b>#12151C</span></div>
+    <div class="sw"><i style="background:#FFB224"></i><span><b>signal amber</b>#FFB224</span></div>
+    <div class="sw"><i style="background:#3DFF88"></i><span><b>phosphor green</b>#3DFF88</span></div>
+    <div class="sw"><i style="background:#EDEFF2"></i><span><b>text</b>#EDEFF2</span></div>
+    <div class="sw"><i style="background:#8A93A3"></i><span><b>secondary</b>#8A93A3</span></div>
+    <div class="sw"><i style="background:#FF5C5C"></i><span><b>rights attention</b>#FF5C5C</span></div>
+  </div>
+
+  <h2>TYPOGRAPHY</h2>
+  <div class="type-row"><div class="a">Space Grotesk — headings, brand</div><small>wordmark, titles, row titles</small></div>
+  <div class="type-row"><div class="b">IBM Plex Mono — data, readouts, explanations</div><small>match lines, timing, counts, provenance labels</small></div>
+  <div class="type-row"><div class="c">system-ui — body text, fallback</div><small>long-form copy only; the desk speaks mono</small></div>
+
+  <h2>PROVENANCE LABELS (structural, never decorative)</h2>
+  <ul class="voice">
+    <li><code>verified</code> — titles, artist, Spotify links, explicit flags, producer/studio credits.</li>
+    <li><code>editorial</code> — mood, energy, instrumentation, scene, use-case tags. Curated by the CWI Sync department. Not audio analysis.</li>
+    <li><code>estimate</code> — every BPM value. Labeled <code>est.</code> Never measured.</li>
+    <li><code>rights</code> — no one-stop or pre-cleared claims. Direct clearance via hp@cumulativeweb.com.</li>
+  </ul>
+
+  <h2>VOICE</h2>
+  <ul class="voice">
+    <li>Terse. Technical. The machine reports; the supervisor decides.</li>
+    <li>Factual, demonstrable claims only. No named-company comparisons. No superlatives.</li>
+    <li>Result counts are promises: "N licensable matches," never "N matches."</li>
+  </ul>
+
+  <h2>SOCIAL PREVIEW</h2>
+  <img class="og" src="og.png" alt="CueFinder social preview: amber crosshair, CueFinder wordmark, search-like-a-supervisor tagline">
+
+  <h2>TOKENS</h2>
+  <p class="sub"><a href="tokens.css">tokens.css</a> — palette, type, and motion variables consumed by every CueFinder surface.</p>
+</div>
+</body>
+</html>

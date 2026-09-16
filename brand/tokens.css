@@ -1,0 +1,23 @@
+/* CueFinder brand tokens — palette, type, motion. (BRAND.md, unchanged by design upgrades.)
+   Consumed by index.html, embed.html, and any surface under /brand/. */
+:root {
+  /* palette — "2AM at the supervisor's desk" */
+  --bg: #0A0C10;
+  --panel: #12151C;
+  --line: #222836;
+  --hairline: #1C212B;
+  --amber: #FFB224;
+  --green: #3DFF88;
+  --red: #FF5C5C;
+  --ink: #EDEFF2;
+  --mut: #8A93A3;
+
+  /* typography */
+  --font-brand: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}

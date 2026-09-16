@@ -1,0 +1,246 @@
+#!/usr/bin/env python3
+"""CueFinder data pipeline — build-time join (INFRASTRUCTURE.md section 2).
+
+Source of truth for track IDENTITY: cwi-learn catalog.json
+  (https://cumulativewebinc.github.io/cwi-learn/catalog.json)
+  -> titles, artist, verified Spotify IDs, explicit flags from Spotify metadata.
+
+Editorial descriptors: descriptors.json (CWI Sync department, curated for search).
+
+The join FAILS LOUDLY if:
+  - the source of truth is unreachable,
+  - any source track has no descriptor entry,
+  - any descriptor entry has no source track.
+Never ships a catalog with silently dropped tracks.
+
+Emits: app/sync-catalog.json, app/catalog.js
+Usage: python3 build_catalog.py
+"""
+import json
+import os
+import re
+import sys
+import urllib.request
+
+BUILD = os.path.dirname(os.path.abspath(__file__))
+APP = os.path.join(BUILD, "app")
+SOURCE_URL = "https://cumulativewebinc.github.io/cwi-learn/catalog.json"
+ARTIST_NAME = "That Boy Hi Hat"
+
+# Verified credits (owner-confirmed facts, not descriptors).
+VERIFIED_CREDITS = {
+    "zooted-zone": {
+        "producer": "Kokurcho (verified)",
+        "mix_master": "Hybrid, Hagerstown MD (verified)",
+        "recorded": "Hagerstown, Feb 2023 (verified)",
+    },
+    "diabolique": {
+        "studio": "Cue Recording Studio, Arlington VA (verified)",
+        "production": "Co-produced by Hybrid + Black Lansky (verified)",
+        "release": "Single, 2026-07-03 (verified)",
+    },
+    "flamerz": {
+        "producer": "Jeck Da General (verified)",
+    },
+}
+
+VOCAB = {
+    "moods": ["dark", "futuristic", "aggressive", "cinematic", "melancholic",
+              "euphoric", "menacing", "triumphant", "hazy", "anthemic",
+              "brooding", "electric"],
+    "energy_words": ["relentless", "simmering", "explosive", "cruising",
+                     "hypnotic", "soaring"],
+    "scenes": ["nighttime driving", "fight scene", "heist sequence", "chase",
+               "locker room", "fashion film", "game trailer", "title sequence",
+               "club scene", "training montage", "end credits", "neon city"],
+    "use_cases": ["trailer", "film", "tv", "game", "ad", "fashion film", "sports"],
+    "instrumentation": ["808s", "trap hats", "distorted synths", "synth pads",
+                        "piano", "strings", "choir", "guitar", "brass",
+                        "vocal chops"],
+}
+
+
+def fetch_source(url):
+    """Fetch the source of truth. curl first (urllib gets truncated reads from
+    this host); urllib fallback. Returns parsed JSON or raises."""
+    import subprocess
+    try:
+        out = subprocess.run(["curl", "-sSf", "--max-time", "30", url],
+                             capture_output=True, timeout=40)
+        if out.returncode == 0 and out.stdout:
+            return json.loads(out.stdout.decode())
+    except Exception:
+        pass
+    with urllib.request.urlopen(url, timeout=30) as resp:
+        return json.loads(resp.read().decode())
+
+
+def norm_title(t):
+    return re.sub(r"\s+", " ", t.strip().lower())
+
+
+def fail(msg):
+    print(f"BUILD FAILED: {msg}", file=sys.stderr)
+    sys.exit(1)
+
+
+def main():
+    # 1. source of truth
+    try:
+        source = fetch_source(SOURCE_URL)
+    except Exception as e:
+        fail(f"source of truth unreachable: {SOURCE_URL}: {e}")
+
+    artist_entry = None
+    for a in source.get("artists", []):
+        if a.get("artist", {}).get("name") == ARTIST_NAME:
+            artist_entry = a
+            break
+    if not artist_entry:
+        fail(f"artist '{ARTIST_NAME}' not found in source of truth")
+
+    source_tracks = artist_entry.get("tracks", [])
+    if not source_tracks:
+        fail("source of truth has zero tracks for " + ARTIST_NAME)
+
+    # 2. editorial descriptors
+    desc_path = os.path.join(BUILD, "descriptors.json")
+    try:
+        with open(desc_path) as f:
+            descriptors = json.load(f)["descriptors"]
+    except Exception as e:
+        fail(f"cannot read descriptors.json: {e}")
+
+    by_title = {norm_title(t["title"]): t for t in source_tracks}
+    by_desc = {norm_title(d["title"]): d for d in descriptors}
+
+    # 3. join — loud on any mismatch
+    missing_desc = [t["title"] for t in source_tracks if norm_title(t["title"]) not in by_desc]
+    missing_src = [d["title"] for d in descriptors if norm_title(d["title"]) not in by_title]
+    if missing_desc:
+        fail(f"{len(missing_desc)} source track(s) have no descriptor entry: {missing_desc}")
+    if missing_src:
+        fail(f"{len(missing_src)} descriptor entries have no source track: {missing_src}")
+
+    # 4. emit
+    tracks = []
+    for st in source_tracks:
+        d = by_desc[norm_title(st["title"])]
+        sid = st.get("spotify_id") or ""
+        if not sid and st.get("spotify_url"):
+            m = re.search(r"/track/([A-Za-z0-9]+)", st["spotify_url"])
+            sid = m.group(1) if m else ""
+        if not sid:
+            fail(f"no Spotify ID for '{st['title']}'")
+        explicit = st.get("explicit_per_spotify_metadata")
+        explicit = explicit if isinstance(explicit, bool) else "unknown"
+        vocal_type = "instrumental" if d["track_id"] == "place-i-go-to-dream-instrumental" else "male"
+
+        tracks.append({
+            "track_id": d["track_id"],
+            "title": st["title"],
+            "artist": ARTIST_NAME,
+            "spotify_id": sid,
+            "spotify_url": f"https://open.spotify.com/track/{sid}",
+            "spotify_url_verified": True,
+            "descriptors_provenance": "editorial",
+            "audio": {
+                "bpm": {"value": d["bpm_estimate"], "confidence": "estimate"},
+                "energy": d["energy"],
+                "energy_provenance": "editorial",
+                "moods": d["moods"],
+                "energy_words": d["energy_words"],
+                "instrumentation": d["instrumentation"],
+                "vocal": {
+                    "type": vocal_type,
+                    "type_provenance": "verified" if vocal_type == "male" else "editorial",
+                    "style": d["vocal_style"],
+                    "style_provenance": "editorial",
+                },
+                "explicit": explicit,
+                "explicit_provenance": "spotify_metadata" if isinstance(explicit, bool) else "unknown",
+            },
+            "sync": {
+                "scenes": d["scenes"],
+                "use_cases": d["use_cases"],
+                "lyrical_themes": d["lyrical_themes"],
+                "lyrical_themes_provenance": "editorial",
+                "sounds_like_reference": "editorial: " + d["sounds_like_reference"],
+            },
+            "rights": {
+                "status": "direct-clearance",
+                "one_stop": False,
+                "pre_cleared": False,
+                "contact": "hp@cumulativeweb.com",
+                "provenance": "verified",
+                "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly.",
+            },
+            "credits": dict({"origin": "Frederick, MD", "provenance": "verified"},
+                            **VERIFIED_CREDITS.get(d["track_id"], {})),
+            "pipeline": {"spotify": "live", "youtube": "checklist", "disco": "checklist",
+                         "sourceaudio": "checklist",
+                         "note": "Guidance, not placement status."},
+            "editorial_note": d.get("editorial_note"),
+        })
+
+    catalog = {
+        "catalog": "cwi.sync-catalog/1.0",
+        "catalog_id": "cwi.tbhh.sync-catalog",  # namespaced: multi-artist future without rewrite
+        "schema_version": "1.0.0",
+        "generated": "2026-09-16",
+        "maintainer": "Cumulative Web Inc",
+        "artist": ARTIST_NAME,
+        "artist_spotify_url": "https://open.spotify.com/artist/2f9j460EwjfvjYp3trBcb7",
+        "artist_origin": {"value": "Frederick, MD", "source": "verified"},
+        "label": "Cumulative Web Inc",
+        "contact": {"business_and_sync": "hp@cumulativeweb.com"},
+        "rights_summary": {
+            "one_stop_claimed": False,
+            "pre_cleared_claimed": False,
+            "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Sync clears directly via hp@cumulativeweb.com.",
+            "source": "verified",
+        },
+        "descriptor_provenance": {
+            "note": "All sonic/scene descriptors are editorial — curated by the CWI Sync department for search. Never audio-analysis output. BPM values are estimates.",
+            "moods": "editorial", "energy": "editorial", "energy_words": "editorial",
+            "instrumentation": "editorial", "scenes": "editorial",
+            "use_cases": "editorial", "lyrical_themes": "editorial",
+            "sounds_like_reference": "editorial",
+        },
+        "vocabularies": VOCAB,
+        "track_count": len(tracks),
+        "tracks": tracks,
+    }
+
+    os.makedirs(APP, exist_ok=True)
+    with open(os.path.join(APP, "sync-catalog.json"), "w") as f:
+        json.dump(catalog, f, indent=2, ensure_ascii=False)
+    # versioned machine layer: /v1/sync-catalog.json — v2 must never silently break v1 consumers
+    v1dir = os.path.join(APP, "v1")
+    os.makedirs(v1dir, exist_ok=True)
+    with open(os.path.join(v1dir, "sync-catalog.json"), "w") as f:
+        json.dump(catalog, f, indent=2, ensure_ascii=False)
+    with open(os.path.join(v1dir, "CHANGELOG.md"), "w") as f:
+        f.write(
+            "# sync-catalog changelog\n\n"
+            "## v1.0.0 — 2026-09-16\n"
+            "- Initial versioned release. Schema `cwi.sync-catalog/1.0`, "
+            "`catalog_id: cwi.tbhh.sync-catalog`.\n"
+            "- 24 tracks, That Boy Hi Hat. Provenance classes: `verified` / "
+            "`editorial` / `estimate` (BPM).\n"
+            "- Rights: no one-stop or pre-cleared claims; direct clearance via "
+            "hp@cumulativeweb.com.\n"
+            "- Consumers: pin to `/v1/sync-catalog.json`. Breaking changes ship "
+            "as `/v2/`; v1 stays frozen.\n"
+        )
+    js = ("// CueFinder catalog data — generated by build_catalog.py. Do not hand-edit.\n"
+          "window.CUEFINDER = window.CUEFINDER || {};\n"
+          "window.CUEFINDER.catalog = " + json.dumps(catalog, ensure_ascii=False) + ";\n")
+    with open(os.path.join(APP, "catalog.js"), "w") as f:
+        f.write(js)
+
+    print(f"JOIN OK: {len(tracks)} source tracks x {len(descriptors)} descriptors -> sync-catalog.json + catalog.js")
+
+
+if __name__ == "__main__":
+    main()

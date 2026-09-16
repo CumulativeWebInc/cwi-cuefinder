@@ -1,0 +1,920 @@
+{
+  "source": "CWI Sync department \u2014 editorial descriptors for search. Not audio analysis.",
+  "descriptors": [
+    {
+      "track_id": "zooted-zone",
+      "title": "Zooted Zone",
+      "bpm_estimate": 142,
+      "energy": 0.88,
+      "moods": [
+        "dark",
+        "aggressive",
+        "anthemic",
+        "electric"
+      ],
+      "energy_words": [
+        "relentless",
+        "explosive"
+      ],
+      "instrumentation": [
+        "808s",
+        "trap hats",
+        "distorted synths"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "club scene",
+        "nighttime driving",
+        "fight scene",
+        "neon city"
+      ],
+      "use_cases": [
+        "film",
+        "tv",
+        "game",
+        "sports"
+      ],
+      "lyrical_themes": [
+        "ambition",
+        "pressure",
+        "escape"
+      ],
+      "sounds_like_reference": "high-voltage trap anthem, peak-hour energy",
+      "editorial_note": null
+    },
+    {
+      "track_id": "shaka-zulu",
+      "title": "Shaka Zulu",
+      "bpm_estimate": 140,
+      "energy": 0.88,
+      "moods": [
+        "triumphant",
+        "cinematic",
+        "aggressive",
+        "anthemic"
+      ],
+      "energy_words": [
+        "explosive",
+        "relentless"
+      ],
+      "instrumentation": [
+        "808s",
+        "brass",
+        "trap hats"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "game trailer",
+        "fight scene",
+        "training montage",
+        "locker room"
+      ],
+      "use_cases": [
+        "trailer",
+        "game",
+        "sports",
+        "film"
+      ],
+      "lyrical_themes": [
+        "power",
+        "legacy",
+        "conquest"
+      ],
+      "sounds_like_reference": "war-drum trap, coronation energy",
+      "editorial_note": null
+    },
+    {
+      "track_id": "doves-diamonds",
+      "title": "Doves & Diamonds",
+      "bpm_estimate": 96,
+      "energy": 0.58,
+      "moods": [
+        "hazy",
+        "euphoric",
+        "cinematic"
+      ],
+      "energy_words": [
+        "cruising",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "piano",
+        "strings",
+        "808s"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "fashion film",
+        "end credits",
+        "neon city"
+      ],
+      "use_cases": [
+        "fashion film",
+        "film",
+        "ad"
+      ],
+      "lyrical_themes": [
+        "luxury",
+        "romance",
+        "arrival"
+      ],
+      "sounds_like_reference": "late-night luxury rap, silk over 808s",
+      "editorial_note": null
+    },
+    {
+      "track_id": "diabolique",
+      "title": "Diabolique",
+      "bpm_estimate": 100,
+      "energy": 0.68,
+      "moods": [
+        "dark",
+        "brooding",
+        "cinematic",
+        "hazy"
+      ],
+      "energy_words": [
+        "simmering",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "distorted synths",
+        "strings",
+        "808s"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "fashion film",
+        "nighttime driving",
+        "neon city",
+        "title sequence"
+      ],
+      "use_cases": [
+        "fashion film",
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "temptation",
+        "danger",
+        "allure"
+      ],
+      "sounds_like_reference": "noir-rap slow burn, after-hours",
+      "editorial_note": null
+    },
+    {
+      "track_id": "flamerz",
+      "title": "Flamerz",
+      "bpm_estimate": 148,
+      "energy": 0.88,
+      "moods": [
+        "aggressive",
+        "electric",
+        "anthemic"
+      ],
+      "energy_words": [
+        "relentless",
+        "explosive"
+      ],
+      "instrumentation": [
+        "808s",
+        "trap hats",
+        "distorted synths"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "club scene",
+        "fight scene",
+        "training montage"
+      ],
+      "use_cases": [
+        "film",
+        "sports",
+        "game"
+      ],
+      "lyrical_themes": [
+        "defiance",
+        "heat",
+        "dominance"
+      ],
+      "sounds_like_reference": "all-gas trap, mosh-pit tempo",
+      "editorial_note": null
+    },
+    {
+      "track_id": "neon-nights-777",
+      "title": "Neon Nights Pt. 777",
+      "bpm_estimate": 104,
+      "energy": 0.68,
+      "moods": [
+        "futuristic",
+        "euphoric",
+        "hazy",
+        "electric"
+      ],
+      "energy_words": [
+        "cruising",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "distorted synths",
+        "synth pads",
+        "808s"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "nighttime driving",
+        "neon city",
+        "club scene",
+        "game trailer"
+      ],
+      "use_cases": [
+        "game",
+        "film",
+        "tv",
+        "ad"
+      ],
+      "lyrical_themes": [
+        "escape",
+        "nightlife",
+        "elevation"
+      ],
+      "sounds_like_reference": "synthwave-adjacent trap, midnight freeway",
+      "editorial_note": null
+    },
+    {
+      "track_id": "ultimate",
+      "title": "Ultimate",
+      "bpm_estimate": 150,
+      "energy": 0.95,
+      "moods": [
+        "anthemic",
+        "triumphant",
+        "aggressive",
+        "electric"
+      ],
+      "energy_words": [
+        "explosive",
+        "relentless"
+      ],
+      "instrumentation": [
+        "808s",
+        "brass",
+        "trap hats"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "game trailer",
+        "training montage",
+        "locker room",
+        "fight scene"
+      ],
+      "use_cases": [
+        "trailer",
+        "sports",
+        "game"
+      ],
+      "lyrical_themes": [
+        "victory",
+        "dominance",
+        "arrival"
+      ],
+      "sounds_like_reference": "stadium-trap peak, final-boss energy",
+      "editorial_note": null
+    },
+    {
+      "track_id": "painted-lady",
+      "title": "Painted Lady",
+      "bpm_estimate": 92,
+      "energy": 0.5,
+      "moods": [
+        "hazy",
+        "brooding",
+        "cinematic"
+      ],
+      "energy_words": [
+        "simmering",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "piano",
+        "strings",
+        "guitar"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "fashion film",
+        "end credits",
+        "neon city"
+      ],
+      "use_cases": [
+        "fashion film",
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "desire",
+        "mystery",
+        "devotion"
+      ],
+      "sounds_like_reference": "smoke-and-velvet rap ballad",
+      "editorial_note": null
+    },
+    {
+      "track_id": "warped-wicked",
+      "title": "Warped and Wicked",
+      "bpm_estimate": 138,
+      "energy": 0.78,
+      "moods": [
+        "dark",
+        "menacing",
+        "futuristic",
+        "aggressive"
+      ],
+      "energy_words": [
+        "relentless",
+        "explosive"
+      ],
+      "instrumentation": [
+        "distorted synths",
+        "808s",
+        "synth pads"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "game trailer",
+        "fight scene",
+        "nighttime driving",
+        "heist sequence"
+      ],
+      "use_cases": [
+        "trailer",
+        "game",
+        "film"
+      ],
+      "lyrical_themes": [
+        "menace",
+        "chaos",
+        "control"
+      ],
+      "sounds_like_reference": "industrial trap, red-lit and snarling",
+      "editorial_note": null
+    },
+    {
+      "track_id": "golden-diamond",
+      "title": "Golden Diamond",
+      "bpm_estimate": 98,
+      "energy": 0.68,
+      "moods": [
+        "triumphant",
+        "cinematic",
+        "anthemic"
+      ],
+      "energy_words": [
+        "soaring",
+        "cruising"
+      ],
+      "instrumentation": [
+        "piano",
+        "strings",
+        "808s"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "fashion film",
+        "end credits",
+        "training montage"
+      ],
+      "use_cases": [
+        "fashion film",
+        "ad",
+        "sports",
+        "film"
+      ],
+      "lyrical_themes": [
+        "success",
+        "shine",
+        "arrival"
+      ],
+      "sounds_like_reference": "champagne-rap, podium finish",
+      "editorial_note": null
+    },
+    {
+      "track_id": "spirits-shadows",
+      "title": "Spirits n Shadows",
+      "bpm_estimate": 88,
+      "energy": 0.5,
+      "moods": [
+        "dark",
+        "brooding",
+        "melancholic"
+      ],
+      "energy_words": [
+        "simmering",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "piano",
+        "strings",
+        "synth pads"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "nighttime driving",
+        "end credits",
+        "title sequence"
+      ],
+      "use_cases": [
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "ghosts",
+        "memory",
+        "weight"
+      ],
+      "sounds_like_reference": "midnight-confessional rap, heavy air",
+      "editorial_note": null
+    },
+    {
+      "track_id": "flex-my-flame",
+      "title": "Flex My Flame",
+      "bpm_estimate": 144,
+      "energy": 0.88,
+      "moods": [
+        "aggressive",
+        "anthemic",
+        "electric"
+      ],
+      "energy_words": [
+        "explosive",
+        "relentless"
+      ],
+      "instrumentation": [
+        "808s",
+        "trap hats",
+        "vocal chops"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "club scene",
+        "training montage",
+        "locker room"
+      ],
+      "use_cases": [
+        "sports",
+        "film",
+        "game"
+      ],
+      "lyrical_themes": [
+        "confidence",
+        "dominance",
+        "heat"
+      ],
+      "sounds_like_reference": "gym-anthem trap, chest-out",
+      "editorial_note": null
+    },
+    {
+      "track_id": "rainbows-roses",
+      "title": "Rainbows And Roses",
+      "bpm_estimate": 100,
+      "energy": 0.58,
+      "moods": [
+        "hazy",
+        "euphoric",
+        "melancholic"
+      ],
+      "energy_words": [
+        "cruising",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "guitar",
+        "synth pads",
+        "piano"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "end credits",
+        "fashion film",
+        "neon city"
+      ],
+      "use_cases": [
+        "film",
+        "ad",
+        "fashion film"
+      ],
+      "lyrical_themes": [
+        "hope",
+        "tenderness",
+        "color"
+      ],
+      "sounds_like_reference": "sun-faded rap, bittersweet lift",
+      "editorial_note": null
+    },
+    {
+      "track_id": "tears-scars",
+      "title": "Tears and Scars",
+      "bpm_estimate": 82,
+      "energy": 0.4,
+      "moods": [
+        "melancholic",
+        "brooding",
+        "cinematic"
+      ],
+      "energy_words": [
+        "simmering"
+      ],
+      "instrumentation": [
+        "piano",
+        "strings"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "end credits",
+        "title sequence"
+      ],
+      "use_cases": [
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "pain",
+        "healing",
+        "memory"
+      ],
+      "sounds_like_reference": "piano-led rap elegy, quiet room",
+      "editorial_note": null
+    },
+    {
+      "track_id": "toxic-elements",
+      "title": "Toxic Elements",
+      "bpm_estimate": 136,
+      "energy": 0.78,
+      "moods": [
+        "dark",
+        "menacing",
+        "aggressive",
+        "electric"
+      ],
+      "energy_words": [
+        "relentless",
+        "explosive"
+      ],
+      "instrumentation": [
+        "distorted synths",
+        "808s",
+        "trap hats"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "fight scene",
+        "game trailer",
+        "heist sequence"
+      ],
+      "use_cases": [
+        "trailer",
+        "game",
+        "film"
+      ],
+      "lyrical_themes": [
+        "danger",
+        "chemistry",
+        "fallout"
+      ],
+      "sounds_like_reference": "caution-tape trap, volatile",
+      "editorial_note": null
+    },
+    {
+      "track_id": "7th-angel",
+      "title": "7th Angel",
+      "bpm_estimate": 90,
+      "energy": 0.58,
+      "moods": [
+        "cinematic",
+        "triumphant",
+        "brooding"
+      ],
+      "energy_words": [
+        "soaring",
+        "simmering"
+      ],
+      "instrumentation": [
+        "strings",
+        "piano",
+        "choir"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "title sequence",
+        "end credits",
+        "game trailer"
+      ],
+      "use_cases": [
+        "trailer",
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "judgment",
+        "grace",
+        "ascent"
+      ],
+      "sounds_like_reference": "cathedral-trap, slow rise",
+      "editorial_note": null
+    },
+    {
+      "track_id": "scorpions-sapphires",
+      "title": "Scorpions & Sapphires",
+      "bpm_estimate": 102,
+      "energy": 0.68,
+      "moods": [
+        "dark",
+        "hazy",
+        "anthemic"
+      ],
+      "energy_words": [
+        "cruising",
+        "simmering"
+      ],
+      "instrumentation": [
+        "808s",
+        "strings",
+        "distorted synths"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "fashion film",
+        "nighttime driving",
+        "club scene"
+      ],
+      "use_cases": [
+        "fashion film",
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "danger",
+        "luxury",
+        "allure"
+      ],
+      "sounds_like_reference": "venom-in-velvet rap, after-midnight",
+      "editorial_note": null
+    },
+    {
+      "track_id": "place-i-go-to-dream",
+      "title": "Place I Go to Dream",
+      "bpm_estimate": 78,
+      "energy": 0.3,
+      "moods": [
+        "hazy",
+        "melancholic"
+      ],
+      "energy_words": [
+        "simmering",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "piano",
+        "synth pads"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "end credits",
+        "title sequence"
+      ],
+      "use_cases": [
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "longing",
+        "escape",
+        "stillness"
+      ],
+      "sounds_like_reference": "weightless rap lullaby",
+      "editorial_note": null
+    },
+    {
+      "track_id": "place-i-go-to-dream-remastered",
+      "title": "Place I Go to Dream - Remastered",
+      "bpm_estimate": 78,
+      "energy": 0.3,
+      "moods": [
+        "hazy",
+        "melancholic"
+      ],
+      "energy_words": [
+        "simmering",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "piano",
+        "synth pads"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "end credits",
+        "title sequence"
+      ],
+      "use_cases": [
+        "film",
+        "tv"
+      ],
+      "lyrical_themes": [
+        "longing",
+        "escape",
+        "stillness"
+      ],
+      "sounds_like_reference": "weightless rap lullaby, remastered",
+      "editorial_note": null
+    },
+    {
+      "track_id": "place-i-go-to-dream-instrumental",
+      "title": "Place I Go to Dream - Instrumental",
+      "bpm_estimate": 78,
+      "energy": 0.3,
+      "moods": [
+        "hazy",
+        "cinematic"
+      ],
+      "energy_words": [
+        "simmering",
+        "hypnotic"
+      ],
+      "instrumentation": [
+        "piano",
+        "synth pads"
+      ],
+      "vocal_style": "n/a",
+      "scenes": [
+        "title sequence",
+        "end credits"
+      ],
+      "use_cases": [
+        "film",
+        "tv",
+        "ad"
+      ],
+      "lyrical_themes": [
+        "stillness",
+        "space"
+      ],
+      "sounds_like_reference": "ambient piano bed, open sky",
+      "editorial_note": "Vocal labeled instrumental from title metadata only \u2014 not an asserted licensable instrumental."
+    },
+    {
+      "track_id": "smokin-pain",
+      "title": "Smokin' Pain",
+      "bpm_estimate": 94,
+      "energy": 0.68,
+      "moods": [
+        "brooding",
+        "melancholic",
+        "aggressive"
+      ],
+      "energy_words": [
+        "simmering",
+        "relentless"
+      ],
+      "instrumentation": [
+        "guitar",
+        "808s",
+        "trap hats"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "nighttime driving",
+        "training montage",
+        "fight scene"
+      ],
+      "use_cases": [
+        "film",
+        "tv",
+        "sports"
+      ],
+      "lyrical_themes": [
+        "hurt",
+        "grind",
+        "smoke"
+      ],
+      "sounds_like_reference": "grit-and-ash rap, windows down",
+      "editorial_note": null
+    },
+    {
+      "track_id": "phantasm",
+      "title": "Phantasm",
+      "bpm_estimate": 106,
+      "energy": 0.58,
+      "moods": [
+        "brooding",
+        "futuristic",
+        "dark",
+        "hazy"
+      ],
+      "energy_words": [
+        "hypnotic",
+        "simmering"
+      ],
+      "instrumentation": [
+        "distorted synths",
+        "synth pads",
+        "808s"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "game trailer",
+        "nighttime driving",
+        "neon city",
+        "title sequence"
+      ],
+      "use_cases": [
+        "game",
+        "trailer",
+        "film"
+      ],
+      "lyrical_themes": [
+        "illusion",
+        "pursuit",
+        "mirage"
+      ],
+      "sounds_like_reference": "phantom-frequency trap, heat shimmer",
+      "editorial_note": null
+    },
+    {
+      "track_id": "misfits-hooligans",
+      "title": "Misfits and Hooligans",
+      "bpm_estimate": 146,
+      "energy": 0.88,
+      "moods": [
+        "electric",
+        "aggressive",
+        "anthemic"
+      ],
+      "energy_words": [
+        "explosive",
+        "relentless"
+      ],
+      "instrumentation": [
+        "guitar",
+        "trap hats",
+        "808s"
+      ],
+      "vocal_style": "hard-edged rap",
+      "scenes": [
+        "fight scene",
+        "training montage",
+        "club scene",
+        "locker room"
+      ],
+      "use_cases": [
+        "sports",
+        "film",
+        "game"
+      ],
+      "lyrical_themes": [
+        "rebellion",
+        "brotherhood",
+        "noise"
+      ],
+      "sounds_like_reference": "riot-trap, boots on the table",
+      "editorial_note": null
+    },
+    {
+      "track_id": "roses-over-monaco",
+      "title": "Roses over Monaco",
+      "bpm_estimate": 94,
+      "energy": 0.5,
+      "moods": [
+        "hazy",
+        "euphoric",
+        "cinematic"
+      ],
+      "energy_words": [
+        "cruising",
+        "soaring"
+      ],
+      "instrumentation": [
+        "piano",
+        "strings",
+        "synth pads"
+      ],
+      "vocal_style": "melodic rap",
+      "scenes": [
+        "fashion film",
+        "end credits",
+        "neon city"
+      ],
+      "use_cases": [
+        "fashion film",
+        "ad",
+        "film"
+      ],
+      "lyrical_themes": [
+        "romance",
+        "wealth",
+        "horizon"
+      ],
+      "sounds_like_reference": "riviera-rap, golden hour",
+      "editorial_note": null
+    }
+  ]
+}
