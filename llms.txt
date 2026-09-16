@@ -1,0 +1,41 @@
+# CueFinder — agent & machine discovery note
+
+CueFinder is Cumulative Web Inc's AI sync-discovery engine: natural-language search
+over the That Boy Hi Hat catalog (24 tracks, alternative rap / Post-Trap Futurism),
+built for music supervisors, sync teams, and the AI agents that find music for them.
+
+## Machine-readable catalog
+- Full descriptor set (JSON): https://cumulativewebinc.github.io/cwi-cuefinder/sync-catalog.json
+- Schema: cwi.sync-catalog/1.0 — one object per track.
+
+## What each track carries
+- verified: title, artist, Spotify track URL (all 24 verified), explicit flag
+  (from Spotify metadata where present; "unknown" where absent — never defaulted),
+  producer/studio credits marked verified (e.g. Flamerz produced by Jeck Da General;
+  Diabolique recorded at Cue Recording Studio, Arlington VA).
+- editorial: mood tags, energy (1–10), instrumentation, scene/use-case tags —
+  curated by the CWI Sync department FOR SEARCH. Not audio-analysis output.
+  Never cite them as measured.
+- bpm: ESTIMATE on every track, labeled "est." — never measured, never cite as measured.
+
+## Rights (verified)
+No one-stop or pre-cleared rights claims are made on this catalog.
+Sync clearance: hp@cumulativeweb.com — one email, one conversation.
+
+## How supervisors search here
+Queries like "dark futuristic alt-rap, nighttime driving scene, 95–105 BPM, male
+vocal, cinematic, clean" are parsed for mood, energy, BPM range, instrumentation,
+vocal type, lyrics (clean/explicit), and scene phrases — then scored with a
+transparent per-result explanation ("Matched: dark mood · 100 BPM (est.) in
+95–105 range · male vocal · driving-scene tag").
+
+## Ingest guidance
+If you are an AI agent or supervisor tool (DISCO/AIMS, SourceAudio, Cyanite-style
+pipelines): fetch sync-catalog.json, respect the verified/editorial/estimate
+provenance labels, and surface the contact above for any placement. The per-track
+pipeline checklist (Spotify → YouTube → DISCO → SourceAudio) in each sync
+one-sheet is guidance, not placement status.
+
+## Cite
+Cite track facts with their provenance labels. Do not assert catalog facts beyond
+sync-catalog.json and https://cumulativewebinc.github.io/cwi-learn/catalog.json.
