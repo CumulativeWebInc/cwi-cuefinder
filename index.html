@@ -4,95 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CueFinder — Search like a supervisor thinks</title>
-<meta name="description" content="CueFinder: natural-language sync discovery over the That Boy Hi Hat catalog. Mood, energy, BPM, scene — the way supervisors search.">
+<meta name="description" content="CueFinder: natural-language sync discovery over the That Boy Hi Hat catalog — 24 tracks. Mood, energy, BPM, scene. No login. Every result licensable via direct clearance.">
+<link rel="canonical" href="https://cumulativewebinc.github.io/cwi-cuefinder/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CueFinder">
+<meta property="og:title" content="CueFinder — Search like a supervisor thinks">
+<meta property="og:description" content="Natural-language sync discovery over the That Boy Hi Hat catalog. 24 tracks, no login, every result licensable.">
+<meta property="og:url" content="https://cumulativewebinc.github.io/cwi-cuefinder/">
+<meta property="og:image" content="https://cumulativewebinc.github.io/cwi-cuefinder/brand/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CueFinder — Search like a supervisor thinks">
+<meta name="twitter:description" content="Natural-language sync discovery over the That Boy Hi Hat catalog. 24 tracks, no login, every result licensable.">
+<meta name="twitter:image" content="https://cumulativewebinc.github.io/cwi-cuefinder/brand/og.png">
 <link rel="icon" type="image/png" href="brand/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand/tokens.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="hero">
-  <div class="hero-inner">
-    <div class="brandline">
-      <img src="brand/cuefinder-mark.png" alt="CueFinder groove-crosshair mark">
-      <span class="wordmark">CUE<em>FINDER</em></span>
-    </div>
-    <h1>Search like a <span class="thin">supervisor thinks.</span></h1>
-    <p class="sub">Natural-language sync discovery over the That Boy Hi Hat catalog — 24 tracks.
-      Mood, energy, BPM, scene. For supervisors, sync teams, and the agents that find music for them.</p>
-    <div class="searchbar">
-      <input id="q" type="text" autocomplete="off" spellcheck="false"
-        placeholder="dark futuristic nighttime driving, 95–105 BPM, male vocal, cinematic">
-      <button id="go">Search</button>
-    </div>
-    <div class="chips" id="example-chips"></div>
-    <div class="parsed" id="parsed" hidden></div>
+<a class="skip" href="#q">Skip to search</a>
+
+<header class="top">
+  <div class="brandline">
+    <img src="brand/cuefinder-mark.png" alt="CueFinder groove-crosshair mark" width="28" height="28">
+    <span class="wordmark">CUE<em>FINDER</em></span>
+  </div>
+  <div class="top-right">
+    <span class="timing" id="timing" aria-live="off" title="Local ranking time, measured on this device">ranked 24 tracks in —</span>
+    <button class="tbtn" id="briefbtn" aria-haspopup="dialog">Brief mode</button>
   </div>
 </header>
 
-<main>
-  <aside class="filters" id="filters">
-    <h2>Filters</h2>
-    <div class="fgroup">
-      <label>BPM range <span class="tag">est.</span></label>
-      <div class="bpmrow">
-        <input type="range" id="bpmMin" min="60" max="160" value="60" aria-label="Minimum BPM">
-        <input type="range" id="bpmMax" min="60" max="160" value="160" aria-label="Maximum BPM">
-      </div>
-      <div class="bpmval"><span id="bpmMinVal">60</span> – <span id="bpmMaxVal">160</span> BPM</div>
+<main class="deck">
+  <section class="palette" aria-label="Sync search">
+    <div class="bar" id="bar">
+      <div class="fchips" id="fchips" aria-label="Active search facets"></div>
+      <input id="q" type="text" autocomplete="off" spellcheck="false"
+        role="combobox" aria-expanded="true" aria-controls="rows" aria-activedescendant=""
+        aria-label="Search the catalog in natural language"
+        placeholder="dark futuristic nighttime driving, 95–105 BPM, male vocal, cinematic">
+      <kbd class="hint" title="Press / or Cmd+K to focus">/</kbd>
     </div>
-    <div class="fgroup">
-      <label for="energy">Energy</label>
-      <select id="energy">
-        <option value="any">Any</option><option value="low">Low</option>
-        <option value="mid">Mid</option><option value="high">High</option>
-      </select>
-    </div>
-    <div class="fgroup">
-      <label>Moods <span class="tag">editorial</span></label>
-      <div class="moodchips" id="moodchips"></div>
-    </div>
-    <div class="fgroup"><label for="vocal">Vocal</label>
-      <select id="vocal"><option value="any">Any</option><option value="male">Male vocal</option><option value="instrumental">Instrumental</option></select>
-    </div>
-    <div class="fgroup"><label for="cleanreq">Lyrics</label>
-      <select id="cleanreq"><option value="any">Any</option><option value="clean">Clean</option><option value="explicit">Explicit</option></select>
-    </div>
-    <div class="fgroup">
-      <label>Scene presets</label>
-      <div class="scenebtns" id="scenebtns"></div>
-    </div>
-    <button class="clear" id="clear">Clear all</button>
-  </aside>
 
-  <section class="results">
-    <div class="reshead"><span id="count"></span><button id="copylink" class="linkbtn">Copy share link</button></div>
-    <div id="cards"></div>
+    <div class="refine" id="refine" hidden aria-label="Query refinements"></div>
+
+    <div class="status">
+      <span id="count" aria-live="polite">24 licensable matches</span>
+      <span class="status-right">
+        <button class="linkbtn" id="copylink">copy search link</button>
+        <button class="linkbtn" id="advtoggle" aria-expanded="false">advanced</button>
+      </span>
+    </div>
+
+    <div class="empty" id="empty">
+      <div class="warm" aria-hidden="true">
+        <img src="brand/cuefinder-mark.png" alt="" width="44" height="44">
+        <span class="scanline"></span>
+      </div>
+      <p class="warm-label">warming up the desk — the whole catalog is already in this page</p>
+      <div class="grammar" aria-label="Search grammar">
+        <p><code>mood</code> <code>energy</code> <code>scene</code> <code>use-case</code> <code>instrument</code> <code>95–105 bpm</code> <code>male vocal</code> <code>clean</code></p>
+        <p class="g-sub">refine with <code>slower</code> <code>faster</code> <code>+ more piano</code> · titles fuzzy-match (<code>zz</code> → Zooted Zone)</p>
+      </div>
+      <div class="examples" id="examples" aria-label="Example searches"></div>
+      <div class="recents" id="recents" hidden aria-label="Recent searches"></div>
+    </div>
+
+    <ul class="rows" id="rows" role="listbox" aria-label="Search results" hidden></ul>
+
+    <div class="adv" id="adv" hidden>
+      <div class="agroup">
+        <label>Moods <span class="tag">editorial</span></label>
+        <div class="moodchips" id="moodchips"></div>
+      </div>
+      <div class="agroup">
+        <label>Scene presets</label>
+        <div class="scenebtns" id="scenebtns"></div>
+      </div>
+      <div class="agroup">
+        <label>BPM range <span class="tag">est.</span></label>
+        <div class="bpmrow">
+          <input type="range" id="bpmMin" min="60" max="160" value="60" aria-label="Minimum BPM">
+          <input type="range" id="bpmMax" min="60" max="160" value="160" aria-label="Maximum BPM">
+        </div>
+        <div class="bpmval"><span id="bpmMinVal">60</span> – <span id="bpmMaxVal">160</span> BPM</div>
+      </div>
+    </div>
   </section>
 </main>
 
-<div class="sheet" id="sheet" hidden>
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
   <div class="sheet-card">
-    <button class="sheet-close" id="sheet-close" aria-label="Close">✕</button>
+    <button class="sheet-close" id="sheet-close" aria-label="Close one-sheet">✕</button>
     <div id="sheet-body"></div>
+  </div>
+</div>
+
+<div class="sheet" id="brief" hidden role="dialog" aria-modal="true" aria-labelledby="brief-title">
+  <div class="sheet-card">
+    <button class="sheet-close" id="brief-close" aria-label="Close brief mode">✕</button>
+    <h2 id="brief-title">Brief mode</h2>
+    <p class="brief-sub">Paste supervisor copy. CueFinder extracts descriptors and runs them as a query.</p>
+    <textarea id="brief-text" rows="6" aria-label="Paste supervisor brief copy"
+      placeholder="Need something dark and futuristic for a nighttime driving scene, around 100 BPM, male vocal, radio-safe…"></textarea>
+    <div class="brief-out" id="brief-out" hidden></div>
+    <div class="brief-actions">
+      <button class="gobtn" id="brief-run">Extract &amp; search</button>
+    </div>
   </div>
 </div>
 
 <footer>
   <div class="honesty">
-    <h3>Data honesty</h3>
+    <h2>Data honesty</h2>
     <ul>
       <li><code>verified</code> — titles, artist, Spotify links, explicit flags (Spotify metadata), producer and studio credits.</li>
       <li><code>editorial</code> — mood, energy, instrumentation, scene, and use-case tags. Curated by the CWI Sync department for search. Not audio-analysis output.</li>
       <li><code>estimate</code> — every BPM value is an estimate, labeled <code>est.</code> Never measured.</li>
       <li><code>rights</code> — no one-stop or pre-cleared claims are made. Every placement clears directly via <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a>.</li>
     </ul>
-    <p class="machine">machine catalog: <a href="sync-catalog.json">sync-catalog.json</a> ·
-      agent note: <a href="discovery.txt">discovery.txt</a> ·
-      source: <a href="https://cumulativewebinc.github.io/cwi-learn/catalog.json">cwi-learn catalog.json</a></p>
+    <p class="machine">Built for agents too —
+      <a href="sync-catalog.json">sync-catalog.json</a> ·
+      <a href="v1/sync-catalog.json">v1</a> ·
+      <a href="discovery.txt">discovery.txt</a> ·
+      <a href=".well-known/agent-card.json">agent-card.json</a> ·
+      <a href="https://cumulativewebinc.github.io/cwi-learn/catalog.json">source catalog</a></p>
   </div>
-  <p class="fine">CueFinder · Cumulative Web Inc · That Boy Hi Hat — 24 tracks · Frederick, MD</p>
+  <p class="fine">CueFinder · Cumulative Web Inc · That Boy Hi Hat — 24 tracks · Frederick, MD · no login, no tracking</p>
 </footer>
 
 <script src="catalog.js"></script>

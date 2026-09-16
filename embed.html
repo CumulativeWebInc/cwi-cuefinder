@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CueFinder embed</title>
+<meta name="description" content="Embeddable CueFinder sync search — That Boy Hi Hat catalog.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand/tokens.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { font-size: 14px; }
+  .embed-wrap { max-width: 720px; margin: 0 auto; padding: 14px; }
+  .embed-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .embed-head .wordmark { font-size: 13px; }
+  .embed-head a { font-family: var(--font-mono); font-size: 11px; color: var(--mut); }
+  .empty { display: none; }
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+  <div class="embed-head">
+    <span class="wordmark">CUE<em>FINDER</em></span>
+    <a href="./" target="_blank" rel="noopener">open full app</a>
+  </div>
+  <div class="bar" id="bar">
+    <input id="q" type="text" autocomplete="off" spellcheck="false"
+      role="combobox" aria-expanded="true" aria-controls="rows"
+      aria-label="Search the catalog" placeholder="mood, scene, BPM — e.g. dark futuristic 100 bpm">
+  </div>
+  <div class="status"><span id="count" aria-live="polite"></span></div>
+  <ul class="rows" id="rows" role="listbox" aria-label="Search results"></ul>
+</div>
+<script src="catalog.js"></script>
+<script src="engine.js"></script>
+<script>
+/* CueFinder embed — zero-dependency, same engine as the full app. */
+(function () {
+  "use strict";
+  var tracks = window.CUEFINDER.catalog.tracks;
+  var ENG = window.CUEFINDER_ENGINE;
+  var INDEX = ENG.buildIndex(tracks);
+  var $ = function (id) { return document.getElementById(id); };
+  var q = $("q"), rows = $("rows"), count = $("count");
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+  function run() {
+    var query = q.value.trim();
+    var res = query ? ENG.search(tracks, query, {}, INDEX) : { results: [], ms: 0 };
+    var n = res.results.length;
+    count.innerHTML = query ? '<span class="n">' + n + "</span> licensable match" + (n === 1 ? "" : "es") : "";
+    rows.innerHTML = res.results.slice(0, 8).map(function (r, i) {
+      var t = r.track, a = t.audio;
+      return '<li class="row" role="option" aria-selected="false">' +
+        '<span class="r-idx">' + (i + 1) + "</span>" +
+        '<div class="r-main"><div class="r-line1">' +
+        '<span class="r-title">' + esc(t.title) + "</span>" +
+        '<span class="r-rights">DIRECT CLEARANCE</span>' +
+        '<span class="r-meta">' + a.bpm.value + " BPM est.</span>" +
+        '</div><div class="r-expl">' + esc(r.matched.join(" + ")) +
+        (r.missed.length ? ' <s>' + r.missed.map(esc).join("</s> <s>") + "</s>" : "") +
+        "</div></div>" +
+        '<a class="r-sim" href="' + t.spotify_url + '" target="_blank" rel="noopener">spotify</a></li>';
+    }).join("");
+  }
+  var t = null;
+  q.addEventListener("input", function () { clearTimeout(t); t = setTimeout(run, 32); });
+
+  // ?q= preset
+  var m = location.search.match(/[?&]q=([^&]+)/);
+  if (m) { q.value = decodeURIComponent(m[1].replace(/\+/g, " ")); run(); }
+})();
+</script>
+</body>
+</html>

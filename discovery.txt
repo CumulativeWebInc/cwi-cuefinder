@@ -8,9 +8,19 @@ machine-readable front door that supervisor tools and agent builders can ingest.
 
 ## Machine-readable catalog
 - Full descriptor set: https://cumulativewebinc.github.io/cwi-cuefinder/sync-catalog.json
-- Schema: cwi.sync-catalog/1.0. Vocabularies are controlled and shared by the
-  search engine and the catalog (moods, energy words, scenes, use cases,
+- Versioned, pinned: https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json
+  (changelog at .../v1/CHANGELOG.md — v2 will never silently break v1 consumers)
+- Agent card: https://cumulativewebinc.github.io/cwi-cuefinder/.well-known/agent-card.json
+- Schema: cwi.sync-catalog/1.0, namespaced by catalog_id "cwi.tbhh.sync-catalog"
+  (multi-artist future without a rewrite). Vocabularies are controlled and shared
+  by the search engine and the catalog (moods, energy words, scenes, use cases,
   instrumentation).
+
+## Embed
+Blogs, supervisor sites, and agent pages can host CueFinder search:
+<iframe src="https://cumulativewebinc.github.io/cwi-cuefinder/embed.html"
+  width="100%" height="520" style="border:0" title="CueFinder search"></iframe>
+Optional preset: embed.html?q=dark+futuristic
 
 ## Provenance labels (binding)
 - verified: titles, artist, Spotify track URLs (all 24), explicit flags from
@@ -29,10 +39,22 @@ Sync clearance: hp@cumulativeweb.com.
 Mood words, energy words, BPM numbers and ranges ("95-105 BPM", "around 100bpm"),
 instrumentation, vocal type ("male vocal", "no vocals"), explicit/clean ("clean",
 "radio-safe"), scene phrases ("nighttime driving scene"), use-case words
-("trailer", "game"). Every result carries a transparent match explanation.
+("trailer", "game"). Refinements: "slower", "faster", "+ more piano".
+Titles fuzzy-match ("zz" -> Zooted Zone). Every result carries a transparent
+match explanation: matched tokens in green, missed tokens struck through.
 
 ## Shareable queries
 Query state is encoded in the URL hash (#q=...&bpmMin=...&moods=...). Send the link.
+The "copy search link" button copies it in one click.
+
+## Scale path (24 -> 10,000 tracks)
+Build-time precomputed token index; ranking is a pure function separable into a
+Web Worker untouched; static JSON on the CDN = $0 reads at any catalog size.
+Schema is namespaced by catalog_id from day one.
+
+## Future (documented, not built)
+Query API + x402 micropayment SKU when CWI's monetization infra is ready.
+The static build does not block that future.
 
 ## Cite
 Cite track facts with their provenance labels. Do not assert catalog facts beyond
