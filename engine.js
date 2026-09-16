@@ -1,8 +1,10 @@
 /* CueFinder search engine — pure logic, no DOM.
  * Works in the browser (window.CUEFINDER_ENGINE) and in Node (module.exports).
- * Genuinely parses natural-language supervisor queries: moods, energy, BPM/ranges,
- * instrumentation, vocal type, clean/explicit, and scene/use-case phrases.
- * Scoring is weighted and every result carries a transparent match explanation.
+ * Controlled vocabularies per BRAND.md section 3 (moods, energy words, scenes,
+ * use cases, instrumentation) — shared by engine + catalog.
+ * Common non-controlled words resolve through a documented synonym map to the
+ * nearest controlled term; unmapped words simply do not match.
+ * Explanations follow the brand voice: terse mono readouts joined with " + ".
  */
 (function (root, factory) {
   if (typeof module !== "undefined" && module.exports) module.exports = factory();
@@ -10,112 +12,130 @@
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  var MOOD_WORDS = [
-    "dark", "futuristic", "cinematic", "aggressive", "smooth", "romantic",
-    "gritty", "euphoric", "melancholic", "menacing", "triumphant", "dreamy",
-    "nostalgic", "rebellious", "luxurious", "haunting", "confident",
-    "introspective", "anthemic", "seductive"
-  ];
+  // ---- controlled vocabularies (BRAND.md section 3) ----
+  var MOODS = ["dark", "futuristic", "aggressive", "cinematic", "melancholic",
+    "euphoric", "menacing", "triumphant", "hazy", "anthemic", "brooding", "electric"];
 
+  var ENERGY_WORDS = ["relentless", "simmering", "explosive", "cruising", "hypnotic", "soaring"];
+
+  var SCENES = ["nighttime driving", "fight scene", "heist sequence", "chase",
+    "locker room", "fashion film", "game trailer", "title sequence",
+    "club scene", "training montage", "end credits", "neon city"];
+
+  var USE_CASES = ["trailer", "film", "tv", "game", "ad", "fashion film", "sports"];
+
+  var INSTRUMENTS = ["808s", "trap hats", "distorted synths", "synth pads",
+    "piano", "strings", "choir", "guitar", "brass", "vocal chops"];
+
+  // ---- documented synonym maps (non-controlled -> nearest controlled term) ----
   var MOOD_SYNONYMS = {
+    "moody": "dark",
     "future": "futuristic", "sci-fi": "futuristic", "scifi": "futuristic", "spacey": "futuristic",
-    "moody": "dark", "brooding": "dark", "ominous": "menacing", "threatening": "menacing",
-    "epic": "cinematic", "film": "cinematic", "orchestral": "cinematic",
-    "hard": "aggressive", "hype": "aggressive", "fierce": "aggressive",
-    "chill": "smooth", "laid-back": "smooth", "laidback": "smooth", "mellow": "smooth",
-    "sexy": "seductive", "sensual": "seductive",
-    "sad": "melancholic", "emotional": "melancholic", "somber": "melancholic",
+    "hard": "aggressive", "fierce": "aggressive",
+    "epic": "cinematic", "filmic": "cinematic",
+    "sad": "melancholic", "somber": "melancholic", "nostalgic": "melancholic", "emotional": "melancholic",
     "happy": "euphoric", "uplifting": "euphoric", "joyful": "euphoric",
-    "bold": "confident", "cocky": "confident", "swagger": "confident",
-    "triumphal": "triumphant", "victorious": "triumphant",
-    "reflective": "introspective", "thoughtful": "introspective",
-    "anthem": "anthemic", "stadium": "anthemic",
-    "fancy": "luxurious", "expensive": "luxurious", "rich": "luxurious", "opulent": "luxurious",
-    "spooky": "haunting", "eerie": "haunting", "ghostly": "haunting",
-    "wild": "rebellious", "punk": "rebellious", "outlaw": "rebellious",
-    "rough": "gritty", "raw": "gritty", "street": "gritty",
-    "romantics": "romantic", "lovey": "romantic"
+    "ominous": "menacing", "threatening": "menacing",
+    "triumphal": "triumphant", "victorious": "triumphant", "luxurious": "triumphant", "fancy": "triumphant",
+    "smooth": "hazy", "chill": "hazy", "dreamy": "hazy", "romantic": "hazy", "seductive": "hazy",
+    "anthem": "anthemic", "stadium": "anthemic", "confident": "anthemic", "bold": "anthemic",
+    "gritty": "brooding", "raw": "brooding", "haunting": "brooding", "spooky": "brooding",
+    "eerie": "brooding", "introspective": "brooding", "reflective": "brooding",
+    "wild": "electric", "rebellious": "electric", "punk": "electric", "charged": "electric"
   };
 
-  // scene -> trigger phrases (longest first matters)
-  var SCENES = {
-    "driving": ["nighttime driving", "night driving", "driving scene", "driving", "road trip", "car"],
-    "chase": ["car chase", "chase scene", "chase", "pursuit"],
-    "fight": ["fight scene", "fight", "combat", "battle", "brawl"],
-    "fashion": ["fashion film", "fashion", "runway", "couture"],
-    "trailer": ["movie trailer", "trailer"],
-    "game": ["game menu", "video game", "gaming", "game"],
-    "club": ["nightclub", "dancefloor", "dance floor", "club"],
-    "party": ["party", "celebration"],
-    "workout": ["workout", "gym", "training", "running"],
-    "sports": ["sports", "highlight reel", "stadium"],
-    "romance": ["love scene", "romantic scene", "date night", "romance"],
-    "montage": ["training montage", "montage"],
-    "commercial": ["commercial", "advertisement", "brand film", "ad"],
-    "titles": ["title sequence", "opening credits", "opening titles", "opening"],
-    "heist": ["heist", "caper"],
-    "drama": ["drama scene", "drama"]
+  var ENERGY_TARGETS = {
+    "explosive": 0.95, "relentless": 0.92, "soaring": 0.80, "cruising": 0.55,
+    "hypnotic": 0.45, "simmering": 0.35,
+    "high-energy": 0.90, "high energy": 0.90, "energetic": 0.80, "intense": 0.90,
+    "hard-hitting": 0.90, "low-energy": 0.30, "low energy": 0.30,
+    "mellow": 0.40, "laid-back": 0.35, "laidback": 0.35, "calm": 0.25, "soft": 0.30, "gentle": 0.25
   };
 
-  var INSTRUMENTS = [
-    "808", "trap hats", "hi-hats", "synth", "piano", "guitar",
-    "strings", "drums", "bass", "choir", "pads", "brass"
-  ];
+  // scene -> trigger phrases (checked longest-first)
+  var SCENE_TRIGGERS = {
+    "nighttime driving": ["nighttime driving", "night driving", "driving"],
+    "fight scene": ["fight scene", "fight", "combat"],
+    "heist sequence": ["heist sequence", "heist"],
+    "chase": ["car chase", "chase", "pursuit"],
+    "locker room": ["locker room"],
+    "fashion film": ["fashion film", "fashion", "runway"],
+    "game trailer": ["game trailer"],
+    "title sequence": ["title sequence", "opening credits", "opening titles"],
+    "club scene": ["club scene", "nightclub", "dancefloor", "dance floor", "club"],
+    "training montage": ["training montage", "montage"],
+    "end credits": ["end credits", "credits"],
+    "neon city": ["neon city"]
+  };
+
+  // use case -> trigger words (checked after scene phrases are consumed)
+  var USECASE_TRIGGERS = {
+    "trailer": ["trailer"],
+    "film": ["film", "movie", "cinema"],
+    "tv": ["tv", "television", "show", "series"],
+    "game": ["video game", "gaming", "game"],
+    "ad": ["advertisement", "commercial", "brand film", "ad"],
+    "sports": ["sports", "sport"],
+    "fashion film": ["fashion film"]
+  };
+
   var INSTRUMENT_SYNONYMS = {
-    "hihats": "trap hats", "hi-hat": "trap hats", "hats": "trap hats",
-    "keys": "piano", "guitars": "guitar", "orchestra": "strings",
-    "orchestral": "strings", "synthesizer": "synth", "synths": "synth",
-    "sub bass": "bass", "sub-bass": "bass", "808s": "808"
-  };
-
-  var ENERGY_WORDS = {
-    "high-energy": 9, "high energy": 9, "energetic": 8, "intense": 9,
-    "hype": 9, "aggressive": 8, "hard-hitting": 9,
-    "mid-energy": 5, "mid energy": 5, "mid-tempo": 5,
-    "low-energy": 3, "low energy": 3, "chill": 3, "mellow": 3,
-    "laid-back": 3, "laidback": 3, "calm": 2, "soft": 3, "gentle": 2
+    "808": "808s", "808's": "808s",
+    "synth": "distorted synths", "synths": "distorted synths", "synthesizer": "distorted synths",
+    "pads": "synth pads", "keys": "piano", "orchestral": "strings", "orchestra": "strings",
+    "hi-hats": "trap hats", "hihats": "trap hats", "hats": "trap hats",
+    "guitars": "guitar", "sub-bass": "808s", "sub bass": "808s"
   };
 
   function norm(q) {
     return (" " + (q || "").toLowerCase()
-      .replace(/[\u2013\u2014]/g, "-")          // en/em dash -> hyphen
-      .replace(/[.,!?;:()"\u201c\u201d\u2018\u2019']/g, " ")
+      .replace(/[–—]/g, "-")
+      .replace(/[.,!?;:()"“”‘’']/g, " ")
       .replace(/\s+/g, " ") + " ");
   }
 
   function takePhrase(text, phrase) {
     var needle = " " + phrase + " ";
-    if (text.indexOf(needle) !== -1) {
-      return text.split(needle).join(" ");
-    }
-    return null;
+    return text.indexOf(needle) !== -1 ? text.split(needle).join(" ") : null;
   }
 
   function parseQuery(raw) {
     var text = norm(raw);
     var p = {
-      raw: raw || "",
-      moods: [], scenes: [], instruments: [],
-      energyTarget: null, bpmMin: null, bpmMax: null,
-      vocal: null, cleanReq: null, genreHit: false
+      raw: raw || "", moods: [], scenes: [], useCases: [], instruments: [],
+      energyWords: [], energyTarget: null,
+      bpmMin: null, bpmMax: null, vocal: null, cleanReq: null, genreHit: false
     };
-
-    // scenes (longest phrases first)
-    Object.keys(SCENES).forEach(function (scene) {
-      var phrases = SCENES[scene].slice().sort(function (a, b) { return b.length - a.length; });
-      for (var i = 0; i < phrases.length; i++) {
-        var rest = takePhrase(text, phrases[i]);
-        if (rest !== null) { text = rest; p.scenes.push(scene); break; }
+    function take(phrases, hit) {
+      var ps = phrases.slice().sort(function (a, b) { return b.length - a.length; });
+      for (var i = 0; i < ps.length; i++) {
+        var rest = takePhrase(text, ps[i]);
+        if (rest !== null) { text = rest; hit(ps[i]); return true; }
       }
+      return false;
+    }
+
+    // scenes (phrases first — "game trailer" must win over bare "trailer")
+    Object.keys(SCENE_TRIGGERS).forEach(function (scene) {
+      take(SCENE_TRIGGERS[scene], function () { p.scenes.push(scene); });
     });
 
-    // energy words (longest first)
-    Object.keys(ENERGY_WORDS).sort(function (a, b) { return b.length - a.length; }).forEach(function (w) {
-      var rest = takePhrase(text, w);
-      if (rest !== null) { text = rest; p.energyTarget = ENERGY_WORDS[w]; }
+    // use cases
+    Object.keys(USECASE_TRIGGERS).forEach(function (uc) {
+      take(USECASE_TRIGGERS[uc], function () {
+        if (p.useCases.indexOf(uc) === -1) p.useCases.push(uc);
+      });
     });
 
-    // BPM: ranges, singles, under/over, tempo words
+    // energy words + generic energy terms (longest first)
+    Object.keys(ENERGY_TARGETS).sort(function (a, b) { return b.length - a.length; }).forEach(function (w) {
+      take([w], function () {
+        p.energyTarget = ENERGY_TARGETS[w];
+        if (ENERGY_WORDS.indexOf(w) !== -1 && p.energyWords.indexOf(w) === -1) p.energyWords.push(w);
+      });
+    });
+
+    // BPM
     var m = text.match(/(\d{2,3})\s*(?:-|to)\s*(\d{2,3})\s*bpm/);
     if (m) { p.bpmMin = +m[1]; p.bpmMax = +m[2]; text = text.replace(m[0], " "); }
     else {
@@ -135,116 +155,108 @@
       }
     }
     if (p.bpmMin === null && p.bpmMax === null) {
-      if (takePhrase(text, "slow tempo")) { text = takePhrase(text, "slow tempo") || text; p.bpmMax = 95; }
-      else if (takePhrase(text, "fast tempo")) { text = takePhrase(text, "fast tempo") || text; p.bpmMin = 130; }
-      else if (takePhrase(text, "mid-tempo")) { text = takePhrase(text, "mid-tempo") || text; p.bpmMin = 90; p.bpmMax = 115; }
+      if (take(["slow tempo"], function () {})) p.bpmMax = 95;
+      else if (take(["fast tempo"], function () {})) p.bpmMin = 130;
+      else if (take(["mid-tempo", "mid tempo"], function () {})) { p.bpmMin = 90; p.bpmMax = 115; }
     }
 
-    // instruments (longest first)
+    // instruments (controlled first, then synonyms)
     INSTRUMENTS.slice().sort(function (a, b) { return b.length - a.length; }).forEach(function (ins) {
-      var rest = takePhrase(text, ins);
-      if (rest !== null) { text = rest; p.instruments.push(ins); }
+      take([ins], function () { if (p.instruments.indexOf(ins) === -1) p.instruments.push(ins); });
     });
     Object.keys(INSTRUMENT_SYNONYMS).forEach(function (syn) {
-      var rest = takePhrase(text, syn);
-      if (rest !== null) { text = rest; p.instruments.push(INSTRUMENT_SYNONYMS[syn]); }
+      take([syn], function () {
+        var v = INSTRUMENT_SYNONYMS[syn];
+        if (p.instruments.indexOf(v) === -1) p.instruments.push(v);
+      });
     });
 
     // vocal
-    [["female vocal", "female"], ["male vocal", "male"], ["instrumental", "instrumental"]].forEach(function (pair) {
-      var rest = takePhrase(text, pair[0]);
-      if (rest !== null) { text = rest; p.vocal = pair[1]; }
-    });
-    if (!p.vocal) {
-      var rest2 = takePhrase(text, "no vocal"); if (rest2 !== null) { text = rest2; p.vocal = "instrumental"; }
-    }
+    take(["female vocal"], function () { p.vocal = "female"; });
+    take(["male vocal"], function () { p.vocal = "male"; });
+    take(["no vocals", "no vocal", "instrumental"], function () { p.vocal = "instrumental"; });
 
     // clean / explicit
-    if (takePhrase(text, "clean") || takePhrase(text, "fcc safe") || takePhrase(text, "radio edit") || takePhrase(text, "radio friendly")) {
-      p.cleanReq = "clean";
-    } else if (takePhrase(text, "explicit")) {
-      p.cleanReq = "explicit";
-    }
+    if (take(["radio-safe", "radio safe", "fcc safe"], function () {}) || takePhrase(text, "clean")) p.cleanReq = "clean";
+    else if (takePhrase(text, "explicit")) p.cleanReq = "explicit";
 
-    // genre (matches whole catalog — informational only)
-    if (takePhrase(text, "alt-rap") || takePhrase(text, "alt rap") || takePhrase(text, "alternative rap") ||
-        takePhrase(text, "post-trap") || takePhrase(text, "post trap") || takePhrase(text, "post-trap futurism") ||
-        takePhrase(text, "hip hop") || takePhrase(text, "hip-hop") || takePhrase(text, "rap")) {
+    // genre (informational — whole catalog matches)
+    if (take(["alternative rap", "alt-rap", "alt rap", "post-trap futurism", "post-trap", "post trap", "hip-hop", "hip hop", "rap"], function () {})) {
       p.genreHit = true;
     }
 
-    // moods: synonyms first, then direct words
+    // moods: synonyms first, then controlled words
     Object.keys(MOOD_SYNONYMS).forEach(function (syn) {
-      var rest = takePhrase(text, syn);
-      if (rest !== null) { text = rest; if (p.moods.indexOf(MOOD_SYNONYMS[syn]) === -1) p.moods.push(MOOD_SYNONYMS[syn]); }
+      take([syn], function () {
+        var v = MOOD_SYNONYMS[syn];
+        if (p.moods.indexOf(v) === -1) p.moods.push(v);
+      });
     });
-    MOOD_WORDS.forEach(function (mood) {
-      var rest = takePhrase(text, mood);
-      if (rest !== null) { text = rest; if (p.moods.indexOf(mood) === -1) p.moods.push(mood); }
+    MOODS.forEach(function (mood) {
+      take([mood], function () {
+        if (p.moods.indexOf(mood) === -1) p.moods.push(mood);
+      });
     });
 
-    // dedupe
-    ["moods", "scenes", "instruments"].forEach(function (k) {
-      p[k] = p[k].filter(function (v, i) { return p[k].indexOf(v) === i; });
-    });
     return p;
   }
 
   function scoreTrack(t, p) {
     var score = 0, ex = [];
+    var audio = t.audio, sync = t.sync;
 
-    // scenes — strongest supervisor signal
     p.scenes.forEach(function (s) {
-      if (t.scenes.indexOf(s) !== -1) { score += 4; ex.push(s + "-scene tag"); }
+      if (sync.scenes.indexOf(s) !== -1) { score += 4; ex.push(s.replace(/ /g, "-") + " tag"); }
     });
-
-    // moods
+    p.useCases.forEach(function (u) {
+      if (sync.use_cases.indexOf(u) !== -1) { score += 2; ex.push(u + " use-case"); }
+    });
     p.moods.forEach(function (mood) {
-      if (t.moods.indexOf(mood) !== -1) { score += 2; ex.push(mood + " mood"); }
+      var idx = audio.moods.indexOf(mood);
+      // first-listed mood is the track's primary descriptor — weight it slightly higher
+      if (idx !== -1) { score += 2 + (idx === 0 ? 0.5 : 0); ex.push(mood); }
+    });
+    p.energyWords.forEach(function (w) {
+      if (audio.energy_words.indexOf(w) !== -1) { score += 1.5; ex.push('"' + w + '" energy'); }
     });
 
-    // energy proximity
     if (p.energyTarget !== null) {
-      var diff = Math.abs(t.energy - p.energyTarget);
-      var eScore = Math.max(0, 3 - diff * 0.75);
+      var diff = Math.abs(audio.energy - p.energyTarget);
+      var eScore = Math.max(0, 3 - diff * 7.5);
       score += eScore;
-      if (eScore > 0.5) ex.push("energy " + t.energy + "/10");
+      if (eScore > 0.5) ex.push("energy " + audio.energy.toFixed(2));
     }
 
-    // BPM
     if (p.bpmMin !== null || p.bpmMax !== null) {
       var lo = p.bpmMin === null ? 0 : p.bpmMin, hi = p.bpmMax === null ? 999 : p.bpmMax;
+      var bpm = audio.bpm.value;
       var label = (p.bpmMin !== null && p.bpmMax !== null)
-        ? (p.bpmMin + "\u2013" + p.bpmMax + " range")
+        ? (p.bpmMin + "–" + p.bpmMax + " range")
         : (p.bpmMax !== null ? "under " + p.bpmMax : "over " + p.bpmMin);
-      if (t.bpm >= lo && t.bpm <= hi) { score += 3; ex.push(t.bpm + " BPM (est.) in " + label); }
-      else if (Math.abs(t.bpm - lo) <= 8 || Math.abs(t.bpm - hi) <= 8) { score += 1; ex.push(t.bpm + " BPM (est.) near " + label); }
-      else { score -= 2; ex.push(t.bpm + " BPM (est.) outside " + label); }
+      if (bpm >= lo && bpm <= hi) { score += 3; ex.push(bpm + " BPM (est.) in " + label); }
+      else if (Math.abs(bpm - lo) <= 8 || Math.abs(bpm - hi) <= 8) { score += 1; ex.push(bpm + " BPM (est.) near " + label); }
+      else { score -= 2; ex.push(bpm + " BPM (est.) outside " + label); }
     }
 
-    // instruments
     p.instruments.forEach(function (ins) {
-      var hit = t.instruments.some(function (ti) { return ti.indexOf(ins) !== -1 || ins.indexOf(ti) !== -1; });
-      if (hit) { score += 1.5; ex.push(ins + " in mix"); }
+      if (audio.instrumentation.indexOf(ins) !== -1) { score += 1.5; ex.push(ins + " in mix"); }
     });
 
-    // vocal — hard-ish match
     if (p.vocal) {
-      if (t.vocal === p.vocal) { score += 2; ex.push(p.vocal === "male" ? "male vocal" : "instrumental"); }
+      if (audio.vocal.type === p.vocal) { score += 2; ex.push(p.vocal === "male" ? "male vocal" : "instrumental"); }
       else { score -= 4; ex.push("not " + p.vocal); }
     }
 
-    // clean / explicit — penalize, never silently mislabel
     if (p.cleanReq === "clean") {
-      if (t.explicit === false) { score += 2; ex.push("clean per Spotify metadata"); }
-      else if (t.explicit === true) { score -= 6; ex.push("\u26a0 explicit per Spotify metadata — no clean version exists"); }
-      else { score -= 4; ex.push("\u26a0 explicit status unknown — not confirmed clean"); }
+      if (audio.explicit === false) { score += 2; ex.push("clean per Spotify metadata"); }
+      else if (audio.explicit === true) { score -= 6; ex.push("explicit per Spotify metadata — no clean version exists"); }
+      else { score -= 4; ex.push("explicit status unknown — not confirmed clean"); }
     } else if (p.cleanReq === "explicit") {
-      if (t.explicit === true) { score += 2; ex.push("explicit per Spotify metadata"); }
-      else if (t.explicit === "unknown") { score -= 2; ex.push("explicit status unknown"); }
+      if (audio.explicit === true) { score += 2; ex.push("explicit per Spotify metadata"); }
+      else if (audio.explicit === "unknown") { score -= 2; ex.push("explicit status unknown"); }
     }
 
-    if (p.genreHit) ex.push("alt-rap catalog match");
+    if (p.genreHit) ex.push("alt-rap catalog");
 
     return { score: score, explanations: ex };
   }
@@ -252,11 +264,10 @@
   function search(tracks, rawQuery, uiFilters) {
     var p = parseQuery(rawQuery);
     var f = uiFilters || {};
-    // UI filters refine/override the parsed query
     if (f.bpmMin != null && f.bpmMin !== "") p.bpmMin = +f.bpmMin;
     if (f.bpmMax != null && f.bpmMax !== "") p.bpmMax = +f.bpmMax;
     if (f.energy && f.energy !== "any") {
-      p.energyTarget = f.energy === "low" ? 3 : f.energy === "mid" ? 5 : 9;
+      p.energyTarget = f.energy === "low" ? 0.30 : f.energy === "mid" ? 0.55 : 0.90;
     }
     if (f.vocal && f.vocal !== "any") p.vocal = f.vocal;
     if (f.cleanReq && f.cleanReq !== "any") p.cleanReq = f.cleanReq;
@@ -267,24 +278,25 @@
       if (p.scenes.indexOf(f.scene) === -1) p.scenes.push(f.scene);
     }
 
-    var hasCriteria = p.moods.length || p.scenes.length || p.instruments.length ||
-      p.energyTarget !== null || p.bpmMin !== null || p.bpmMax !== null ||
-      p.vocal || p.cleanReq;
+    var hasCriteria = p.moods.length || p.scenes.length || p.useCases.length ||
+      p.instruments.length || p.energyWords.length || p.energyTarget !== null ||
+      p.bpmMin !== null || p.bpmMax !== null || p.vocal || p.cleanReq;
 
     var results = tracks.map(function (t) {
       var s = scoreTrack(t, p);
-      if (!hasCriteria) s.explanations = ["browse mode — no query terms matched"];
+      if (!hasCriteria) s.explanations = ["browse mode"];
       return { track: t, score: s.score, explanations: s.explanations };
     });
 
     results.sort(function (a, b) {
       if (b.score !== a.score) return b.score - a.score;
-      if (b.track.energy !== a.track.energy) return b.track.energy - a.track.energy;
+      if (b.track.audio.energy !== a.track.audio.energy) return b.track.audio.energy - a.track.audio.energy;
       return a.track.title < b.track.title ? -1 : 1;
     });
     return { parsed: p, results: results };
   }
 
   return { parseQuery: parseQuery, scoreTrack: scoreTrack, search: search,
-           MOOD_WORDS: MOOD_WORDS, SCENES: SCENES };
+           MOODS: MOODS, ENERGY_WORDS: ENERGY_WORDS, SCENES: SCENES,
+           USE_CASES: USE_CASES, INSTRUMENTS: INSTRUMENTS };
 });
