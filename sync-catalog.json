@@ -1,0 +1,928 @@
+{
+  "catalog": "cwi.sync-catalog/1.0",
+  "generated": "2026-09-16",
+  "maintainer": "Cumulative Web Inc",
+  "artist": "That Boy Hi Hat",
+  "artist_spotify_url": "https://open.spotify.com/artist/2f9j460EwjfvjYp3trBcb7",
+  "artist_origin": {
+    "value": "Frederick, MD",
+    "source": "verified"
+  },
+  "label": "Cumulative Web Inc",
+  "contact": {
+    "business_and_sync": "hp@cumulativeweb.com"
+  },
+  "rights": {
+    "one_stop_claimed": false,
+    "pre_cleared_claimed": false,
+    "note": "No one-stop or pre-cleared rights claims are made. All sync licensing requires direct clearance via hp@cumulativeweb.com.",
+    "source": "verified (cwi-learn catalog_facts)"
+  },
+  "descriptor_provenance": {
+    "moods": "editorial — curated by the CWI Sync department for search; not audio-analysis output",
+    "energy": "editorial — 1-10 scale, curated for search",
+    "bpm": "editorial estimate — never measured; labeled 'est.' everywhere",
+    "instruments": "editorial — curated for search",
+    "scenes": "editorial — sync use-case tags, curated for search"
+  },
+  "track_count": 24,
+  "tracks": [
+    {
+      "id": "zooted-zone",
+      "title": "Zooted Zone",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "0emH8ktA8x4DkOFLsG5xkW",
+      "spotify_url": "https://open.spotify.com/track/0emH8ktA8x4DkOFLsG5xkW",
+      "spotify_url_verified": true,
+      "explicit": "unknown",
+      "explicit_source": "unknown",
+      "vocal": "male",
+      "energy": 9,
+      "energy_source": "editorial",
+      "bpm": 142,
+      "bpm_source": "estimate",
+      "moods": [
+        "dark",
+        "aggressive",
+        "anthemic",
+        "confident"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "808",
+        "trap hats",
+        "synth"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "club",
+        "workout",
+        "fight",
+        "driving"
+      ],
+      "scenes_source": "editorial",
+      "credits": {
+        "producer": {
+          "value": "Kokurcho",
+          "source": "verified"
+        },
+        "mix_master": {
+          "value": "Hybrid, Hagerstown MD",
+          "source": "verified"
+        },
+        "recorded": {
+          "value": "Hagerstown, Feb 2023",
+          "source": "verified"
+        }
+      },
+      "editorial_note": null
+    },
+    {
+      "id": "shaka-zulu",
+      "title": "Shaka Zulu",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "3pQEzg7xFqGIk0CK1Za1Kw",
+      "spotify_url": "https://open.spotify.com/track/3pQEzg7xFqGIk0CK1Za1Kw",
+      "spotify_url_verified": true,
+      "explicit": "unknown",
+      "explicit_source": "unknown",
+      "vocal": "male",
+      "energy": 9,
+      "energy_source": "editorial",
+      "bpm": 140,
+      "bpm_source": "estimate",
+      "moods": [
+        "triumphant",
+        "cinematic",
+        "aggressive",
+        "confident"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "808",
+        "drums",
+        "orchestral hits"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "trailer",
+        "fight",
+        "sports",
+        "game"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "doves-diamonds",
+      "title": "Doves & Diamonds",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "4NAyd7rvnuG3DrPFqXo4eQ",
+      "spotify_url": "https://open.spotify.com/track/4NAyd7rvnuG3DrPFqXo4eQ",
+      "spotify_url_verified": true,
+      "explicit": "unknown",
+      "explicit_source": "unknown",
+      "vocal": "male",
+      "energy": 6,
+      "energy_source": "editorial",
+      "bpm": 96,
+      "bpm_source": "estimate",
+      "moods": [
+        "luxurious",
+        "smooth",
+        "romantic",
+        "dreamy"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "strings",
+        "808"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fashion",
+        "romance",
+        "montage",
+        "commercial"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "diabolique",
+      "title": "Diabolique",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2eSyWmIdPzEMyWejLb2LBj",
+      "spotify_url": "https://open.spotify.com/track/2eSyWmIdPzEMyWejLb2LBj",
+      "spotify_url_verified": true,
+      "explicit": "unknown",
+      "explicit_source": "unknown",
+      "vocal": "male",
+      "energy": 7,
+      "energy_source": "editorial",
+      "bpm": 100,
+      "bpm_source": "estimate",
+      "moods": [
+        "dark",
+        "haunting",
+        "seductive",
+        "cinematic"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "synth",
+        "strings",
+        "808"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fashion",
+        "trailer",
+        "driving",
+        "romance"
+      ],
+      "scenes_source": "editorial",
+      "credits": {
+        "recorded": {
+          "value": "Cue Recording Studio, Arlington VA",
+          "source": "verified"
+        },
+        "production": {
+          "value": "Co-produced by Hybrid + Black Lansky",
+          "source": "verified"
+        },
+        "release": {
+          "value": "Single, 2026-07-03",
+          "source": "verified"
+        }
+      },
+      "editorial_note": null
+    },
+    {
+      "id": "flamerz",
+      "title": "Flamerz",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2MDHAUo4zJTHGXGQHUhNw0",
+      "spotify_url": "https://open.spotify.com/track/2MDHAUo4zJTHGXGQHUhNw0",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 9,
+      "energy_source": "editorial",
+      "bpm": 148,
+      "bpm_source": "estimate",
+      "moods": [
+        "aggressive",
+        "gritty",
+        "rebellious",
+        "confident"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "808",
+        "trap hats",
+        "synth"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "club",
+        "fight",
+        "workout"
+      ],
+      "scenes_source": "editorial",
+      "credits": {
+        "producer": {
+          "value": "Jeck Da General",
+          "source": "verified"
+        }
+      },
+      "editorial_note": null
+    },
+    {
+      "id": "neon-nights-777",
+      "title": "Neon Nights Pt. 777",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "4XP56LZjeS0TJUd30kpGSK",
+      "spotify_url": "https://open.spotify.com/track/4XP56LZjeS0TJUd30kpGSK",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 7,
+      "energy_source": "editorial",
+      "bpm": 104,
+      "bpm_source": "estimate",
+      "moods": [
+        "futuristic",
+        "euphoric",
+        "dreamy",
+        "smooth"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "synth",
+        "808"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "driving",
+        "game",
+        "fashion",
+        "club"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "ultimate",
+      "title": "Ultimate",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2daugr3ni3r6jHH6UI57EK",
+      "spotify_url": "https://open.spotify.com/track/2daugr3ni3r6jHH6UI57EK",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 10,
+      "energy_source": "editorial",
+      "bpm": 150,
+      "bpm_source": "estimate",
+      "moods": [
+        "anthemic",
+        "triumphant",
+        "confident",
+        "aggressive"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "808",
+        "drums",
+        "synth brass"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "trailer",
+        "sports",
+        "fight",
+        "workout"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "painted-lady",
+      "title": "Painted Lady",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "6nhzq7P7x09aUbPts4ywFl",
+      "spotify_url": "https://open.spotify.com/track/6nhzq7P7x09aUbPts4ywFl",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 5,
+      "energy_source": "editorial",
+      "bpm": 92,
+      "bpm_source": "estimate",
+      "moods": [
+        "seductive",
+        "smooth",
+        "romantic",
+        "luxurious"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "strings",
+        "guitar"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "romance",
+        "fashion",
+        "montage"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "warped-wicked",
+      "title": "Warped and Wicked",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "3w4RKguHAT2xd9K0w5CklC",
+      "spotify_url": "https://open.spotify.com/track/3w4RKguHAT2xd9K0w5CklC",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 8,
+      "energy_source": "editorial",
+      "bpm": 138,
+      "bpm_source": "estimate",
+      "moods": [
+        "dark",
+        "menacing",
+        "futuristic",
+        "aggressive"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "synth",
+        "808",
+        "distorted bass"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "trailer",
+        "fight",
+        "game",
+        "driving"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "golden-diamond",
+      "title": "Golden Diamond",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "4RFWRhPn8NX0DTQPpl1swe",
+      "spotify_url": "https://open.spotify.com/track/4RFWRhPn8NX0DTQPpl1swe",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 7,
+      "energy_source": "editorial",
+      "bpm": 98,
+      "bpm_source": "estimate",
+      "moods": [
+        "luxurious",
+        "triumphant",
+        "confident",
+        "smooth"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "strings",
+        "808"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fashion",
+        "commercial",
+        "montage",
+        "sports"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "spirits-shadows",
+      "title": "Spirits n Shadows",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2tEdW6WKfcs2NGI6OIvAm6",
+      "spotify_url": "https://open.spotify.com/track/2tEdW6WKfcs2NGI6OIvAm6",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 5,
+      "energy_source": "editorial",
+      "bpm": 88,
+      "bpm_source": "estimate",
+      "moods": [
+        "dark",
+        "haunting",
+        "melancholic",
+        "introspective"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "strings",
+        "ambient pads"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "driving",
+        "montage",
+        "trailer"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "flex-my-flame",
+      "title": "Flex My Flame",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "7FQvcCS2CdTVsd6hb9jvHx",
+      "spotify_url": "https://open.spotify.com/track/7FQvcCS2CdTVsd6hb9jvHx",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 9,
+      "energy_source": "editorial",
+      "bpm": 144,
+      "bpm_source": "estimate",
+      "moods": [
+        "confident",
+        "aggressive",
+        "anthemic",
+        "rebellious"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "808",
+        "trap hats"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "club",
+        "workout",
+        "sports"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "rainbows-roses",
+      "title": "Rainbows And Roses",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2ZUYjQGsRLHRcsfgyeAWpo",
+      "spotify_url": "https://open.spotify.com/track/2ZUYjQGsRLHRcsfgyeAWpo",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 6,
+      "energy_source": "editorial",
+      "bpm": 100,
+      "bpm_source": "estimate",
+      "moods": [
+        "dreamy",
+        "romantic",
+        "euphoric",
+        "nostalgic"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "guitar",
+        "synth pads",
+        "piano"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "romance",
+        "montage",
+        "commercial",
+        "fashion"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "tears-scars",
+      "title": "Tears and Scars",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "6NfxhZ4NebIduGEKZeD2Lk",
+      "spotify_url": "https://open.spotify.com/track/6NfxhZ4NebIduGEKZeD2Lk",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 4,
+      "energy_source": "editorial",
+      "bpm": 82,
+      "bpm_source": "estimate",
+      "moods": [
+        "melancholic",
+        "introspective",
+        "haunting",
+        "gritty"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "strings"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "montage",
+        "drama"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "toxic-elements",
+      "title": "Toxic Elements",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2aTbpxiF2jNiB3PGi81oqa",
+      "spotify_url": "https://open.spotify.com/track/2aTbpxiF2jNiB3PGi81oqa",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 8,
+      "energy_source": "editorial",
+      "bpm": 136,
+      "bpm_source": "estimate",
+      "moods": [
+        "dark",
+        "menacing",
+        "aggressive",
+        "gritty"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "synth",
+        "808",
+        "drums"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fight",
+        "trailer",
+        "game"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "7th-angel",
+      "title": "7th Angel",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "2dvfN5rFyQO69qmb5oYlRG",
+      "spotify_url": "https://open.spotify.com/track/2dvfN5rFyQO69qmb5oYlRG",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 6,
+      "energy_source": "editorial",
+      "bpm": 90,
+      "bpm_source": "estimate",
+      "moods": [
+        "cinematic",
+        "triumphant",
+        "haunting",
+        "introspective"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "strings",
+        "piano",
+        "choir pads"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "trailer",
+        "montage",
+        "titles"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "scorpions-sapphires",
+      "title": "Scorpions & Sapphires",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "6YQq5GsaUmanh0XyHQIGoR",
+      "spotify_url": "https://open.spotify.com/track/6YQq5GsaUmanh0XyHQIGoR",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 7,
+      "energy_source": "editorial",
+      "bpm": 102,
+      "bpm_source": "estimate",
+      "moods": [
+        "luxurious",
+        "dark",
+        "seductive",
+        "confident"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "808",
+        "strings",
+        "synth"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fashion",
+        "driving",
+        "club"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "place-i-go-to-dream",
+      "title": "Place I Go to Dream",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "3KX10tZBft6gp2Nea9HZOB",
+      "spotify_url": "https://open.spotify.com/track/3KX10tZBft6gp2Nea9HZOB",
+      "spotify_url_verified": true,
+      "explicit": false,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 3,
+      "energy_source": "editorial",
+      "bpm": 78,
+      "bpm_source": "estimate",
+      "moods": [
+        "dreamy",
+        "introspective",
+        "nostalgic",
+        "smooth"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "ambient pads"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "montage",
+        "romance",
+        "titles"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "place-i-go-to-dream-remastered",
+      "title": "Place I Go to Dream - Remastered",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "31MTBSMfWy4jGEYAilkaH8",
+      "spotify_url": "https://open.spotify.com/track/31MTBSMfWy4jGEYAilkaH8",
+      "spotify_url_verified": true,
+      "explicit": false,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 3,
+      "energy_source": "editorial",
+      "bpm": 78,
+      "bpm_source": "estimate",
+      "moods": [
+        "dreamy",
+        "introspective",
+        "nostalgic",
+        "smooth"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "ambient pads"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "montage",
+        "romance",
+        "titles"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "place-i-go-to-dream-instrumental",
+      "title": "Place I Go to Dream - Instrumental",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "3tKoMnnlkcRr7wE3PUQ9bp",
+      "spotify_url": "https://open.spotify.com/track/3tKoMnnlkcRr7wE3PUQ9bp",
+      "spotify_url_verified": true,
+      "explicit": false,
+      "explicit_source": "spotify_metadata",
+      "vocal": "instrumental",
+      "energy": 3,
+      "energy_source": "editorial",
+      "bpm": 78,
+      "bpm_source": "estimate",
+      "moods": [
+        "dreamy",
+        "cinematic",
+        "nostalgic"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "ambient pads"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "montage",
+        "titles",
+        "commercial"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": "Vocal labeled instrumental from title metadata only — not an asserted licensable instrumental."
+    },
+    {
+      "id": "smokin-pain",
+      "title": "Smokin' Pain",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "6jJpR9IhQ9PmRPJpxLlOmK",
+      "spotify_url": "https://open.spotify.com/track/6jJpR9IhQ9PmRPJpxLlOmK",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 7,
+      "energy_source": "editorial",
+      "bpm": 94,
+      "bpm_source": "estimate",
+      "moods": [
+        "gritty",
+        "melancholic",
+        "aggressive",
+        "introspective"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "guitar",
+        "808",
+        "drums"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "driving",
+        "workout",
+        "fight"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "phantasm",
+      "title": "Phantasm",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "7xbS3rY8ZzCXNEPLPykf95",
+      "spotify_url": "https://open.spotify.com/track/7xbS3rY8ZzCXNEPLPykf95",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 6,
+      "energy_source": "editorial",
+      "bpm": 106,
+      "bpm_source": "estimate",
+      "moods": [
+        "haunting",
+        "futuristic",
+        "dark",
+        "dreamy"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "synth",
+        "ambient pads",
+        "808"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "trailer",
+        "game",
+        "driving"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "misfits-hooligans",
+      "title": "Misfits and Hooligans",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "4Z5UCQLqWzpPeihPTZ9Gqg",
+      "spotify_url": "https://open.spotify.com/track/4Z5UCQLqWzpPeihPTZ9Gqg",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 9,
+      "energy_source": "editorial",
+      "bpm": 146,
+      "bpm_source": "estimate",
+      "moods": [
+        "rebellious",
+        "gritty",
+        "anthemic",
+        "confident"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "guitar",
+        "drums",
+        "808"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fight",
+        "sports",
+        "workout",
+        "club"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    },
+    {
+      "id": "roses-over-monaco",
+      "title": "Roses over Monaco",
+      "artist": "That Boy Hi Hat",
+      "spotify_id": "3r86CjoxCNvvCz98h2btm1",
+      "spotify_url": "https://open.spotify.com/track/3r86CjoxCNvvCz98h2btm1",
+      "spotify_url_verified": true,
+      "explicit": true,
+      "explicit_source": "spotify_metadata",
+      "vocal": "male",
+      "energy": 5,
+      "energy_source": "editorial",
+      "bpm": 94,
+      "bpm_source": "estimate",
+      "moods": [
+        "luxurious",
+        "romantic",
+        "smooth",
+        "nostalgic"
+      ],
+      "moods_source": "editorial",
+      "instruments": [
+        "piano",
+        "strings",
+        "synth"
+      ],
+      "instruments_source": "editorial",
+      "scenes": [
+        "fashion",
+        "romance",
+        "commercial"
+      ],
+      "scenes_source": "editorial",
+      "credits": {},
+      "editorial_note": null
+    }
+  ]
+}
