@@ -59,6 +59,20 @@
     return "explicit status unknown";
   }
 
+  /* ---- conversion layer: real mailto mechanisms ----
+   * The $49 evidence report is fulfilled by the CWI Sync department at
+   * hp@cumulativeweb.com (the catalog's canonical clearance contact).
+   * Track name is pre-filled via encoded mailto params — no checkout,
+   * no JS required, works on every device. */
+  function evidenceMailto(title) {
+    var subj = "CueFinder \u2014 evidence report request ($49) \u2014 " + title;
+    var body = "Track: " + title + "\nArtist: That Boy Hi Hat\n\n" +
+      "Please send the verified placement & rights evidence report for this track ($49).\n\n" +
+      "Name / production:\nUse case:";
+    return "mailto:hp@cumulativeweb.com?subject=" + encodeURIComponent(subj) +
+      "&body=" + encodeURIComponent(body);
+  }
+
   /* ---- row rendering: dense ~64px, rights badge after title, mono explanation ---- */
   function explHTML(r) {
     if (r.browse) return '<span class="browse">browse mode — full catalog, no query</span>';
@@ -266,6 +280,7 @@
       'Every placement clears directly — <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a>.</p>' +
       '<div class="sheet-actions">' +
       '<a class="gobtn" href="' + t.spotify_url + '" target="_blank" rel="noopener">Spotify</a>' +
+      '<a class="ghostbtn" href="' + evidenceMailto(t.title) + '" title="Opens an email to hp@cumulativeweb.com with this track pre-filled">Get this track\u2019s evidence report ($49)</a>' +
       '<button class="ghostbtn" id="sheet-sim">Similar descriptors</button>' +
       "</div>";
     $("sheet").hidden = false;

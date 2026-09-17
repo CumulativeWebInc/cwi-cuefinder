@@ -252,7 +252,55 @@ footer { border-top: 1px solid var(--hairline); padding: 30px 22px 40px; }
   .timing { display: none; }
   .sheet-grid { grid-template-columns: 1fr; }
   .deck { padding: 18px 12px 40px; }
+  .store-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- supervisor conversion strip: professional instrument, not a pop-up ----
+ * Static, quiet, same panel language as the search bar. No animation. */
+.sup-strip {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 12px; padding: 10px 14px;
+  background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px;
+  font-family: var(--font-mono); font-size: 12.5px; color: var(--mut);
+}
+.sup-k {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .12em; color: var(--amber);
+  border: 1px solid var(--amber); border-radius: 3px; padding: 2px 6px; white-space: nowrap;
+}
+.sup-t { flex: 1 1 200px; }
+.sup-cta {
+  color: #0A0C10; background: var(--amber); border-radius: 6px;
+  font-weight: 600; font-size: 12.5px; padding: 8px 14px; text-decoration: none; white-space: nowrap;
+}
+.sup-cta:hover { filter: brightness(1.08); }
+.sup-cta.ghost {
+  background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 400;
+}
+.sup-cta.ghost:hover { border-color: var(--amber); color: var(--amber); filter: none; }
+
+/* ---- footer store card: one tasteful product panel ---- */
+.store-card {
+  max-width: 880px; margin: 26px auto 0; padding: 20px;
+  background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px;
+}
+.store-card h2 {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; color: var(--mut); margin: 0 0 14px;
+}
+.store-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.store-item {
+  border: 1px solid var(--line); border-radius: 8px; padding: 16px;
+  background: var(--bg); display: flex; flex-direction: column;
+}
+.store-item h3 { font-family: var(--font-brand); font-size: 16px; margin: 0 0 8px; color: var(--ink); }
+.store-item .price { font-family: var(--font-mono); color: var(--green); font-size: 14px; margin-left: 8px; }
+.store-item p { font-size: 13px; color: var(--mut); margin: 0 0 14px; flex: 1; }
+.store-item p em { font-style: normal; color: var(--amber); }
+.store-note { font-family: var(--font-mono); font-size: 12px; color: var(--mut); margin: 14px 0 0; }
+
+/* anchors used as action buttons */
+.sheet-actions a.gobtn, .sheet-actions a.ghostbtn,
+.store-item a.ghostbtn { display: inline-block; text-decoration: none; }
+.store-item a.ghostbtn { align-self: flex-start; }
 
 /* ---- reduced motion: every animation off ---- */
 @media (prefers-reduced-motion: reduce) {
