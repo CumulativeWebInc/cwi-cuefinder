@@ -22,6 +22,20 @@ Blogs, supervisor sites, and agent pages can host CueFinder search:
   width="100%" height="520" style="border:0" title="CueFinder search"></iframe>
 Optional preset: embed.html?q=dark+futuristic
 
+## Sync brief packs (v1.1.0)
+Five machine-readable brief packs, one per brief type, for supervisors and agents:
+sports hype, trailer tension, fashion film, horror/thriller, sneaker commercial.
+- Bundle: https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs
+  (also .../v1/brief-packs.json)
+- Single packs: .../v1/brief-packs-sports-hype.json, .../v1/brief-packs-trailer-tension.json,
+  .../v1/brief-packs-fashion-film.json, .../v1/brief-packs-horror-thriller.json,
+  .../v1/brief-packs-sneaker-commercial.json
+- Agent index: https://cumulativewebinc.github.io/cwi-cuefinder/v1/index.json
+Each pack carries >=2 best-fit tracks with full sonic descriptors (BPM est., moods,
+energy, scenes, use cases, lyrical themes, sounds-like reference, credits, rights),
+carried through verbatim from v1/sync-catalog.json. Rights: no one-stop or pre-cleared
+claims; clearance direct via hp@cumulativeweb.com.
+
 ## Provenance labels (binding)
 - verified: titles, artist, Spotify track URLs (all 24), explicit flags from
   Spotify metadata ("unknown" where absent — never defaulted), producer/studio

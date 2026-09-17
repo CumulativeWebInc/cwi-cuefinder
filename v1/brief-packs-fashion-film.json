@@ -1,0 +1,255 @@
+{
+ "schema": "cwi.brief-pack/1.0",
+ "pack_id": "fashion-film",
+ "name": "Fashion Film",
+ "description": "Hazy, cinematic slow-burn rap for fashion films, runway and luxury-brand spots. All picks carry 'fashion film' in their catalog use cases, BPM 94-100 (est.), hazy/cinematic moods over neon-city scenes.",
+ "brief_targets": {
+  "moods": [
+   "hazy",
+   "cinematic",
+   "euphoric",
+   "brooding"
+  ],
+  "energy_min": 0.45,
+  "bpm_min": 94,
+  "bpm_max": 100,
+  "scenes": [
+   "fashion film",
+   "neon city",
+   "end credits"
+  ],
+  "use_cases": [
+   "fashion film"
+  ]
+ },
+ "catalog_id": "cwi.tbhh.sync-catalog",
+ "catalog_ref": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+ "pack_url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-fashion-film.json",
+ "track_count": 3,
+ "rights_summary": {
+  "one_stop_claimed": false,
+  "pre_cleared_claimed": false,
+  "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Sync clears directly via hp@cumulativeweb.com.",
+  "source": "verified"
+ },
+ "tracks": [
+  {
+   "track_id": "doves-diamonds",
+   "title": "Doves & Diamonds",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "4NAyd7rvnuG3DrPFqXo4eQ",
+   "spotify_url": "https://open.spotify.com/track/4NAyd7rvnuG3DrPFqXo4eQ",
+   "spotify_url_verified": true,
+   "match_note": "96 BPM (est.), energy 0.58, moods: hazy, euphoric, cinematic. Scenes: fashion film, end credits, neon city. Use cases: fashion film, film, ad. editorial: late-night luxury rap, silk over 808s.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 96,
+     "confidence": "estimate"
+    },
+    "energy": 0.58,
+    "energy_provenance": "editorial",
+    "moods": [
+     "hazy",
+     "euphoric",
+     "cinematic"
+    ],
+    "energy_words": [
+     "cruising",
+     "hypnotic"
+    ],
+    "instrumentation": [
+     "piano",
+     "strings",
+     "808s"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "melodic rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": "unknown",
+    "explicit_provenance": "unknown"
+   },
+   "sync": {
+    "scenes": [
+     "fashion film",
+     "end credits",
+     "neon city"
+    ],
+    "use_cases": [
+     "fashion film",
+     "film",
+     "ad"
+    ],
+    "lyrical_themes": [
+     "luxury",
+     "romance",
+     "arrival"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: late-night luxury rap, silk over 808s"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  },
+  {
+   "track_id": "diabolique",
+   "title": "Diabolique",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "2eSyWmIdPzEMyWejLb2LBj",
+   "spotify_url": "https://open.spotify.com/track/2eSyWmIdPzEMyWejLb2LBj",
+   "spotify_url_verified": true,
+   "match_note": "100 BPM (est.), energy 0.68, moods: dark, brooding, cinematic, hazy. Scenes: fashion film, nighttime driving, neon city, title sequence. Use cases: fashion film, film, tv. editorial: noir-rap slow burn, after-hours.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 100,
+     "confidence": "estimate"
+    },
+    "energy": 0.68,
+    "energy_provenance": "editorial",
+    "moods": [
+     "dark",
+     "brooding",
+     "cinematic",
+     "hazy"
+    ],
+    "energy_words": [
+     "simmering",
+     "hypnotic"
+    ],
+    "instrumentation": [
+     "distorted synths",
+     "strings",
+     "808s"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "melodic rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": "unknown",
+    "explicit_provenance": "unknown"
+   },
+   "sync": {
+    "scenes": [
+     "fashion film",
+     "nighttime driving",
+     "neon city",
+     "title sequence"
+    ],
+    "use_cases": [
+     "fashion film",
+     "film",
+     "tv"
+    ],
+    "lyrical_themes": [
+     "temptation",
+     "danger",
+     "allure"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: noir-rap slow burn, after-hours"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified",
+    "studio": "Cue Recording Studio, Arlington VA (verified)",
+    "production": "Co-produced by Hybrid + Black Lansky (verified)",
+    "release": "Single, 2026-07-03 (verified)"
+   }
+  },
+  {
+   "track_id": "roses-over-monaco",
+   "title": "Roses over Monaco",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "3r86CjoxCNvvCz98h2btm1",
+   "spotify_url": "https://open.spotify.com/track/3r86CjoxCNvvCz98h2btm1",
+   "spotify_url_verified": true,
+   "match_note": "94 BPM (est.), energy 0.5, moods: hazy, euphoric, cinematic. Scenes: fashion film, end credits, neon city. Use cases: fashion film, ad, film. editorial: riviera-rap, golden hour.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 94,
+     "confidence": "estimate"
+    },
+    "energy": 0.5,
+    "energy_provenance": "editorial",
+    "moods": [
+     "hazy",
+     "euphoric",
+     "cinematic"
+    ],
+    "energy_words": [
+     "cruising",
+     "soaring"
+    ],
+    "instrumentation": [
+     "piano",
+     "strings",
+     "synth pads"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "melodic rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "fashion film",
+     "end credits",
+     "neon city"
+    ],
+    "use_cases": [
+     "fashion film",
+     "ad",
+     "film"
+    ],
+    "lyrical_themes": [
+     "romance",
+     "wealth",
+     "horizon"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: riviera-rap, golden hour"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  }
+ ]
+}

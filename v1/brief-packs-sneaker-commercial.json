@@ -1,0 +1,259 @@
+{
+ "schema": "cwi.brief-pack/1.0",
+ "pack_id": "sneaker-commercial",
+ "name": "Sneaker Commercial",
+ "description": "High-voltage anthems for sneaker and streetwear spots: peak-hour trap, anthemic/electric/aggressive moods, BPM 142-148 (est.), club scene and neon city scenes. Built for 30-second cuts and product reveals.",
+ "brief_targets": {
+  "moods": [
+   "anthemic",
+   "electric",
+   "aggressive"
+  ],
+  "energy_min": 0.85,
+  "bpm_min": 142,
+  "bpm_max": 148,
+  "scenes": [
+   "club scene",
+   "neon city",
+   "nighttime driving"
+  ],
+  "use_cases": [
+   "film",
+   "tv",
+   "game"
+  ]
+ },
+ "catalog_id": "cwi.tbhh.sync-catalog",
+ "catalog_ref": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+ "pack_url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sneaker-commercial.json",
+ "track_count": 3,
+ "rights_summary": {
+  "one_stop_claimed": false,
+  "pre_cleared_claimed": false,
+  "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Sync clears directly via hp@cumulativeweb.com.",
+  "source": "verified"
+ },
+ "tracks": [
+  {
+   "track_id": "zooted-zone",
+   "title": "Zooted Zone",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "0emH8ktA8x4DkOFLsG5xkW",
+   "spotify_url": "https://open.spotify.com/track/0emH8ktA8x4DkOFLsG5xkW",
+   "spotify_url_verified": true,
+   "match_note": "142 BPM (est.), energy 0.88, moods: dark, aggressive, anthemic, electric. Scenes: club scene, nighttime driving, fight scene, neon city. Use cases: film, tv, game, sports. editorial: high-voltage trap anthem, peak-hour energy.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 142,
+     "confidence": "estimate"
+    },
+    "energy": 0.88,
+    "energy_provenance": "editorial",
+    "moods": [
+     "dark",
+     "aggressive",
+     "anthemic",
+     "electric"
+    ],
+    "energy_words": [
+     "relentless",
+     "explosive"
+    ],
+    "instrumentation": [
+     "808s",
+     "trap hats",
+     "distorted synths"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": "unknown",
+    "explicit_provenance": "unknown"
+   },
+   "sync": {
+    "scenes": [
+     "club scene",
+     "nighttime driving",
+     "fight scene",
+     "neon city"
+    ],
+    "use_cases": [
+     "film",
+     "tv",
+     "game",
+     "sports"
+    ],
+    "lyrical_themes": [
+     "ambition",
+     "pressure",
+     "escape"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: high-voltage trap anthem, peak-hour energy"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified",
+    "producer": "Kokurcho (verified)",
+    "mix_master": "Hybrid, Hagerstown MD (verified)",
+    "recorded": "Hagerstown, Feb 2023 (verified)"
+   }
+  },
+  {
+   "track_id": "flamerz",
+   "title": "Flamerz",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "2MDHAUo4zJTHGXGQHUhNw0",
+   "spotify_url": "https://open.spotify.com/track/2MDHAUo4zJTHGXGQHUhNw0",
+   "spotify_url_verified": true,
+   "match_note": "148 BPM (est.), energy 0.88, moods: aggressive, electric, anthemic. Scenes: club scene, fight scene, training montage. Use cases: film, sports, game. editorial: all-gas trap, mosh-pit tempo.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 148,
+     "confidence": "estimate"
+    },
+    "energy": 0.88,
+    "energy_provenance": "editorial",
+    "moods": [
+     "aggressive",
+     "electric",
+     "anthemic"
+    ],
+    "energy_words": [
+     "relentless",
+     "explosive"
+    ],
+    "instrumentation": [
+     "808s",
+     "trap hats",
+     "distorted synths"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "club scene",
+     "fight scene",
+     "training montage"
+    ],
+    "use_cases": [
+     "film",
+     "sports",
+     "game"
+    ],
+    "lyrical_themes": [
+     "defiance",
+     "heat",
+     "dominance"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: all-gas trap, mosh-pit tempo"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified",
+    "producer": "Jeck Da General (verified)"
+   }
+  },
+  {
+   "track_id": "misfits-hooligans",
+   "title": "Misfits and Hooligans",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "4Z5UCQLqWzpPeihPTZ9Gqg",
+   "spotify_url": "https://open.spotify.com/track/4Z5UCQLqWzpPeihPTZ9Gqg",
+   "spotify_url_verified": true,
+   "match_note": "146 BPM (est.), energy 0.88, moods: electric, aggressive, anthemic. Scenes: fight scene, training montage, club scene, locker room. Use cases: sports, film, game. editorial: riot-trap, boots on the table.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 146,
+     "confidence": "estimate"
+    },
+    "energy": 0.88,
+    "energy_provenance": "editorial",
+    "moods": [
+     "electric",
+     "aggressive",
+     "anthemic"
+    ],
+    "energy_words": [
+     "explosive",
+     "relentless"
+    ],
+    "instrumentation": [
+     "guitar",
+     "trap hats",
+     "808s"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "fight scene",
+     "training montage",
+     "club scene",
+     "locker room"
+    ],
+    "use_cases": [
+     "sports",
+     "film",
+     "game"
+    ],
+    "lyrical_themes": [
+     "rebellion",
+     "brotherhood",
+     "noise"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: riot-trap, boots on the table"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  }
+ ]
+}

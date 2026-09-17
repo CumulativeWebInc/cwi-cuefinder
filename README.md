@@ -8,6 +8,8 @@ the agents that find music for them.
 **Machine catalog:** https://cumulativewebinc.github.io/cwi-cuefinder/sync-catalog.json
 **Versioned:** https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json
 **Agent note:** https://cumulativewebinc.github.io/cwi-cuefinder/discovery.txt
+**Brief packs:** https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs (5 machine-readable sync brief packs)
+**v1 index:** https://cumulativewebinc.github.io/cwi-cuefinder/v1/index.json
 **Agent card:** https://cumulativewebinc.github.io/cwi-cuefinder/.well-known/agent-card.json
 **Embed:** https://cumulativewebinc.github.io/cwi-cuefinder/embed.html
 
