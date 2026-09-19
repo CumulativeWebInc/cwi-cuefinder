@@ -1,0 +1,29 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "CueFinder Sync Discovery API",
+    "version": "1.0.0",
+    "description": "Sync-discovery engine for the Cumulative Web Inc catalog. Describe a scene, mood, or brief in plain language and resolve licensable track matches from the 24-track sync catalog with sonic descriptors. Public read-only HTTPS GET. No authentication required. Rights: no one-stop or pre-cleared claims; direct clearance via hp@cumulativeweb.com.",
+    "contact": {"name": "Cumulative Web Inc", "url": "https://cumulativeweb.com", "email": "hp@cumulativeweb.com"},
+    "license": {"name": "See https://cumulativewebinc.github.io/cwi-legal/terms.html"}
+  },
+  "servers": [{"url": "https://cumulativewebinc.github.io/cwi-cuefinder", "description": "Production"}],
+  "paths": {
+    "/v1/sync-catalog.json": {
+      "get": {
+        "operationId": "getSyncCatalog",
+        "summary": "Sync catalog v1",
+        "description": "24-track sync catalog with sonic descriptors (mood, energy, BPM, scene use-cases).",
+        "responses": {"200": {"description": "Sync catalog document", "content": {"application/json": {"schema": {"type": "object"}}}}}
+      }
+    },
+    "/.well-known/agent-card.json": {
+      "get": {
+        "operationId": "getAgentCard",
+        "summary": "A2A agent card",
+        "description": "A2A protocol agent card describing connector routing and capabilities.",
+        "responses": {"200": {"description": "Agent card document", "content": {"application/json": {"schema": {"type": "object"}}}}}
+      }
+    }
+  }
+}
