@@ -1,0 +1,255 @@
+{
+ "schema": "cwi.brief-pack/1.0",
+ "pack_id": "trailer-tension",
+ "name": "Trailer Tension",
+ "description": "Dark, menacing trap for action/horror trailers and tension beds. All picks carry 'trailer' in their catalog use cases, dark/menacing/aggressive moods, game trailer / heist sequence scenes, BPM 106-138 (est.).",
+ "brief_targets": {
+  "moods": [
+   "dark",
+   "menacing",
+   "aggressive",
+   "futuristic"
+  ],
+  "energy_min": 0.55,
+  "bpm_min": 106,
+  "bpm_max": 138,
+  "scenes": [
+   "game trailer",
+   "heist sequence",
+   "fight scene"
+  ],
+  "use_cases": [
+   "trailer"
+  ]
+ },
+ "catalog_id": "cwi.tbhh.sync-catalog",
+ "catalog_ref": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+ "pack_url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-trailer-tension.json",
+ "track_count": 3,
+ "rights_summary": {
+  "one_stop_claimed": false,
+  "pre_cleared_claimed": false,
+  "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Sync clears directly via hp@cumulativeweb.com.",
+  "source": "verified"
+ },
+ "tracks": [
+  {
+   "track_id": "warped-wicked",
+   "title": "Warped and Wicked",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "3w4RKguHAT2xd9K0w5CklC",
+   "spotify_url": "https://open.spotify.com/track/3w4RKguHAT2xd9K0w5CklC",
+   "spotify_url_verified": true,
+   "match_note": "138 BPM (est.), energy 0.78, moods: dark, menacing, futuristic, aggressive. Scenes: game trailer, fight scene, nighttime driving, heist sequence. Use cases: trailer, game, film. editorial: industrial trap, red-lit and snarling.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 138,
+     "confidence": "estimate"
+    },
+    "energy": 0.78,
+    "energy_provenance": "editorial",
+    "moods": [
+     "dark",
+     "menacing",
+     "futuristic",
+     "aggressive"
+    ],
+    "energy_words": [
+     "relentless",
+     "explosive"
+    ],
+    "instrumentation": [
+     "distorted synths",
+     "808s",
+     "synth pads"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "game trailer",
+     "fight scene",
+     "nighttime driving",
+     "heist sequence"
+    ],
+    "use_cases": [
+     "trailer",
+     "game",
+     "film"
+    ],
+    "lyrical_themes": [
+     "menace",
+     "chaos",
+     "control"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: industrial trap, red-lit and snarling"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  },
+  {
+   "track_id": "toxic-elements",
+   "title": "Toxic Elements",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "2aTbpxiF2jNiB3PGi81oqa",
+   "spotify_url": "https://open.spotify.com/track/2aTbpxiF2jNiB3PGi81oqa",
+   "spotify_url_verified": true,
+   "match_note": "136 BPM (est.), energy 0.78, moods: dark, menacing, aggressive, electric. Scenes: fight scene, game trailer, heist sequence. Use cases: trailer, game, film. editorial: caution-tape trap, volatile.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 136,
+     "confidence": "estimate"
+    },
+    "energy": 0.78,
+    "energy_provenance": "editorial",
+    "moods": [
+     "dark",
+     "menacing",
+     "aggressive",
+     "electric"
+    ],
+    "energy_words": [
+     "relentless",
+     "explosive"
+    ],
+    "instrumentation": [
+     "distorted synths",
+     "808s",
+     "trap hats"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "fight scene",
+     "game trailer",
+     "heist sequence"
+    ],
+    "use_cases": [
+     "trailer",
+     "game",
+     "film"
+    ],
+    "lyrical_themes": [
+     "danger",
+     "chemistry",
+     "fallout"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: caution-tape trap, volatile"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  },
+  {
+   "track_id": "phantasm",
+   "title": "Phantasm",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "7xbS3rY8ZzCXNEPLPykf95",
+   "spotify_url": "https://open.spotify.com/track/7xbS3rY8ZzCXNEPLPykf95",
+   "spotify_url_verified": true,
+   "match_note": "106 BPM (est.), energy 0.58, moods: brooding, futuristic, dark, hazy. Scenes: game trailer, nighttime driving, neon city, title sequence. Use cases: game, trailer, film. editorial: phantom-frequency trap, heat shimmer.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 106,
+     "confidence": "estimate"
+    },
+    "energy": 0.58,
+    "energy_provenance": "editorial",
+    "moods": [
+     "brooding",
+     "futuristic",
+     "dark",
+     "hazy"
+    ],
+    "energy_words": [
+     "hypnotic",
+     "simmering"
+    ],
+    "instrumentation": [
+     "distorted synths",
+     "synth pads",
+     "808s"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "melodic rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "game trailer",
+     "nighttime driving",
+     "neon city",
+     "title sequence"
+    ],
+    "use_cases": [
+     "game",
+     "trailer",
+     "film"
+    ],
+    "lyrical_themes": [
+     "illusion",
+     "pursuit",
+     "mirage"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: phantom-frequency trap, heat shimmer"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  }
+ ]
+}

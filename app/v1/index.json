@@ -1,0 +1,55 @@
+{
+ "schema": "cwi.v1-index/1.0",
+ "catalog_id": "cwi.tbhh.sync-catalog",
+ "generated": "2026-09-17",
+ "endpoints": [
+  {
+   "path": "/v1/sync-catalog.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+   "schema": "cwi.sync-catalog/1.0",
+   "description": "Full 24-track machine catalog with sonic descriptors and rights fields."
+  },
+  {
+   "path": "/v1/brief-packs",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs",
+   "schema": "cwi.brief-packs/1.0",
+   "description": "5 machine-readable sync brief packs (sports hype, trailer tension, fashion film, horror/thriller, sneaker commercial)."
+  },
+  {
+   "path": "/v1/brief-packs.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs.json",
+   "schema": "cwi.brief-packs/1.0",
+   "description": "Same brief-packs bundle with .json content type."
+  },
+  {
+   "path": "/v1/brief-packs-sports-hype.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sports-hype.json",
+   "schema": "cwi.brief-pack/1.0",
+   "description": "Single brief pack: Sports Hype."
+  },
+  {
+   "path": "/v1/brief-packs-trailer-tension.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-trailer-tension.json",
+   "schema": "cwi.brief-pack/1.0",
+   "description": "Single brief pack: Trailer Tension."
+  },
+  {
+   "path": "/v1/brief-packs-fashion-film.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-fashion-film.json",
+   "schema": "cwi.brief-pack/1.0",
+   "description": "Single brief pack: Fashion Film."
+  },
+  {
+   "path": "/v1/brief-packs-horror-thriller.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-horror-thriller.json",
+   "schema": "cwi.brief-pack/1.0",
+   "description": "Single brief pack: Horror / Thriller."
+  },
+  {
+   "path": "/v1/brief-packs-sneaker-commercial.json",
+   "url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sneaker-commercial.json",
+   "schema": "cwi.brief-pack/1.0",
+   "description": "Single brief pack: Sneaker Commercial."
+  }
+ ]
+}

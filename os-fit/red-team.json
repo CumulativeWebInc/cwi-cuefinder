@@ -1,70 +1,72 @@
 {
- "id": "rt-2026-09-23",
- "target": "CueFinder OS retrofit (https://cumulativewebinc.github.io/cwi-cuefinder/)",
- "attacker_urn": "urn:cwi:agent:retrofit-wave2-worker",
- "started_at": "2026-09-23T12:00:00Z",
- "completed_at": "2026-09-23T12:30:00Z",
- "verdict": "cleared",
- "checklist": [
-  {
-   "item": "failure-modes",
-   "disposition": "passed",
-   "finding": "67/67 gate checks; query parser fallbacks documented"
-  },
-  {
-   "item": "exploit-vectors",
-   "disposition": "passed",
-   "finding": "static; rank() pure \u2014 no DOM, no network, no user-data egress"
-  },
-  {
-   "item": "weakest-assumption",
-   "disposition": "mitigated",
-   "finding": "moods/scenes are editorial curation \u2014 labeled verified/editorial/estimate on every field"
-  },
-  {
-   "item": "scale-10x",
-   "disposition": "passed",
-   "finding": "token index precomputed once; ranking avg <1ms (gate <50ms)"
-  },
-  {
-   "item": "scale-100x",
-   "disposition": "passed",
-   "finding": "engine pure; 10k-track path documented in README"
-  },
-  {
-   "item": "api-disappearance",
-   "disposition": "mitigated",
-   "finding": "Spotify oembed is enhancement only; catalog is local JSON"
-  },
-  {
-   "item": "data-corruption",
-   "disposition": "passed",
-   "finding": "versioned /v1/ catalog + changelog"
-  },
-  {
-   "item": "unexpected-users",
-   "disposition": "passed",
-   "finding": "query state in URL hash; copy-search-link sharing"
-  },
-  {
-   "item": "credential-leak",
-   "disposition": "passed",
-   "finding": "no credentials anywhere; secret scan clean"
-  },
-  {
-   "item": "hallucination",
-   "disposition": "passed",
-   "finding": "transparent match explanations; missed tokens struck through; no invented facts"
-  },
-  {
-   "item": "malicious-instructions",
-   "disposition": "passed",
-   "finding": "query grammar has no instruction surface"
-  },
-  {
-   "item": "memory-poisoning",
-   "disposition": "passed",
-   "finding": "no memory surface"
-  }
- ]
+  "id": "rt-2026-09-23",
+  "target": "CueFinder OS retrofit (https://cumulativewebinc.github.io/cwi-cuefinder/)",
+  "attacker_urn": "urn:cwi:agent:retrofit-wave2-worker",
+  "started_at": "2026-09-23T12:00:00Z",
+  "completed_at": "2026-09-23T13:09:08.469745+00:00",
+  "verdict": "cleared",
+  "checklist": [
+    {
+      "check": "tests-green",
+      "verdict": "pass",
+      "finding": "255/255 checks green (engine 19, gates 64, brief-packs 150, conversion 22); catalog rebuilt 23x23 join OK"
+    },
+    {
+      "check": "no-egress",
+      "verdict": "pass",
+      "finding": "static site; rank() pure \u2014 no DOM writes, no network calls, no user-data egress; secret scan clean"
+    },
+    {
+      "check": "honest-labels",
+      "verdict": "pass",
+      "finding": "moods/scenes labeled editorial; BPM estimate; rights deny one-stop/pre-cleared; no invented claims"
+    },
+    {
+      "check": "perf",
+      "verdict": "pass",
+      "finding": "token index precomputed once; ranking gate <50ms enforced in gates.test.js"
+    },
+    {
+      "check": "scale",
+      "verdict": "pass",
+      "finding": "engine pure function; 10k-track path documented"
+    },
+    {
+      "check": "oembed",
+      "verdict": "pass",
+      "finding": "Spotify oembed enhancement only; catalog is local JSON"
+    },
+    {
+      "check": "versioning",
+      "verdict": "pass",
+      "finding": "versioned /v1/ catalog + changelog; v1.2.0 entry appended for this change"
+    },
+    {
+      "check": "url-state",
+      "verdict": "pass",
+      "finding": "query state in URL hash; copy-search-link sharing only"
+    },
+    {
+      "check": "secrets",
+      "verdict": "pass",
+      "finding": "no credentials anywhere; secret scan clean 2026-09-23; no .env/.pem/.key files"
+    },
+    {
+      "check": "transparency",
+      "verdict": "pass",
+      "finding": "transparent match explanations; missed tokens struck through; no invented data"
+    },
+    {
+      "check": "injection-surface",
+      "verdict": "pass",
+      "finding": "query grammar has no instruction surface; descriptors are fixed vocabularies"
+    },
+    {
+      "check": "memory",
+      "verdict": "pass",
+      "finding": "no memory surface; no localStorage of PII"
+    }
+  ],
+  "run_date": "2026-09-23",
+  "catalog_decision": "Orphan descriptor 'place-i-go-to-dream' retired: original recording absent from catalog source of truth; Remastered variant (Spotify 31MTBSMfWy4jGEYAilkaH8, ISRC QZDA52227918) is the valid recording. Authorization: Black's explicit approval 2026-09-23 09:05 EDT ('Place I dream is good, proceed')."
 }

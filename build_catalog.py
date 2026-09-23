@@ -15,12 +15,23 @@ Never ships a catalog with silently dropped tracks.
 
 Emits: app/sync-catalog.json, app/catalog.js
 Usage: python3 build_catalog.py
+
+Bundle layout note (2026-09-23): app/ is the full testable bundle — it also
+carries copies of engine.js, app.js, index.html, styles.css, embed.html,
+brand/, .well-known/agent-card.json and the v1/ brief packs, because
+tests/*.test.js read from app/. After rebuilding the catalog, sync the
+catalog outputs to the repo root (what GitHub Pages serves):
+  cp app/sync-catalog.json sync-catalog.json
+  cp app/catalog.js catalog.js
+  cp app/v1/sync-catalog.json v1/sync-catalog.json
+and append a changelog entry to v1/CHANGELOG.md (never overwrite it).
 """
 import json
 import os
 import re
 import sys
 import urllib.request
+from datetime import date
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 APP = os.path.join(BUILD, "app")
@@ -90,17 +101,13 @@ TITLE_ALIASES = {
     "Warped and Wicked": "Warped & Wicked",
     "Toxic Elements": "Toxic Element",
 }
-# Variant-formatting aliases: descriptor title -> source title for known
-# song variants whose titles differ only by ' - X' vs ' (X)' formatting.
-# These are NOT same-recording claims: each variant keeps its own Spotify ID
-# and ISRC from the source of truth (documented per variant below).
-# Verified 2026-09-23:
-#   'Place I Go to Dream - Remastered'   -> Spotify 31MTBSMfWy4jGEYAilkaH8, ISRC QZDA52227918
-#   'Place I Go to Dream - Instrumental' -> Spotify 3tKoMnnlkcRr7wE3PUQ9bp, ISRC QZDA52227919
-TITLE_ALIASES.update({
-    "Place I Go to Dream - Remastered": "Place I Go to Dream (Remastered)",
-    "Place I Go to Dream - Instrumental": "Place I Go to Dream (Instrumental)",
-})
+# Variant-formatting aliases were retired 2026-09-23: descriptor titles now use
+# the catalog's exact titles ("Place I Go to Dream (Remastered)",
+# "Place I Go to Dream (Instrumental)"), so no mapping is needed. The orphan
+# descriptor for the retired original recording was removed with Black's
+# explicit approval ("Place I dream is good, proceed" — 2026-09-23 09:05 EDT);
+# the Remastered variant (Spotify 31MTBSMfWy4jGEYAilkaH8, ISRC QZDA52227918)
+# is the valid recording per the catalog source of truth.
 
 
 def fail(msg):
@@ -221,7 +228,7 @@ def main():
         "catalog": "cwi.sync-catalog/1.0",
         "catalog_id": "cwi.tbhh.sync-catalog",  # namespaced: multi-artist future without rewrite
         "schema_version": "1.0.0",
-        "generated": "2026-09-16",
+        "generated": date.today().isoformat(),
         "maintainer": "Cumulative Web Inc",
         "artist": ARTIST_NAME,
         "artist_spotify_url": "https://open.spotify.com/artist/2f9j460EwjfvjYp3trBcb7",

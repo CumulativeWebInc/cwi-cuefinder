@@ -1,0 +1,255 @@
+{
+ "schema": "cwi.brief-pack/1.0",
+ "pack_id": "sports-hype",
+ "name": "Sports Hype",
+ "description": "Maximum-voltage trap for broadcast sports cues: anthem drops, training montages, locker-room and highlight-reel moments. All picks carry 'sports' in their catalog use cases, BPM 140-150 (est.), energy 0.85+, anthemic/aggressive/electric moods.",
+ "brief_targets": {
+  "moods": [
+   "anthemic",
+   "aggressive",
+   "electric",
+   "triumphant"
+  ],
+  "energy_min": 0.85,
+  "bpm_min": 140,
+  "bpm_max": 150,
+  "scenes": [
+   "training montage",
+   "locker room",
+   "fight scene"
+  ],
+  "use_cases": [
+   "sports"
+  ]
+ },
+ "catalog_id": "cwi.tbhh.sync-catalog",
+ "catalog_ref": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+ "pack_url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sports-hype.json",
+ "track_count": 3,
+ "rights_summary": {
+  "one_stop_claimed": false,
+  "pre_cleared_claimed": false,
+  "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Sync clears directly via hp@cumulativeweb.com.",
+  "source": "verified"
+ },
+ "tracks": [
+  {
+   "track_id": "ultimate",
+   "title": "Ultimate",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "2daugr3ni3r6jHH6UI57EK",
+   "spotify_url": "https://open.spotify.com/track/2daugr3ni3r6jHH6UI57EK",
+   "spotify_url_verified": true,
+   "match_note": "150 BPM (est.), energy 0.95, moods: anthemic, triumphant, aggressive, electric. Scenes: game trailer, training montage, locker room, fight scene. Use cases: trailer, sports, game. editorial: stadium-trap peak, final-boss energy.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 150,
+     "confidence": "estimate"
+    },
+    "energy": 0.95,
+    "energy_provenance": "editorial",
+    "moods": [
+     "anthemic",
+     "triumphant",
+     "aggressive",
+     "electric"
+    ],
+    "energy_words": [
+     "explosive",
+     "relentless"
+    ],
+    "instrumentation": [
+     "808s",
+     "brass",
+     "trap hats"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "game trailer",
+     "training montage",
+     "locker room",
+     "fight scene"
+    ],
+    "use_cases": [
+     "trailer",
+     "sports",
+     "game"
+    ],
+    "lyrical_themes": [
+     "victory",
+     "dominance",
+     "arrival"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: stadium-trap peak, final-boss energy"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  },
+  {
+   "track_id": "shaka-zulu",
+   "title": "Shaka Zulu",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "3pQEzg7xFqGIk0CK1Za1Kw",
+   "spotify_url": "https://open.spotify.com/track/3pQEzg7xFqGIk0CK1Za1Kw",
+   "spotify_url_verified": true,
+   "match_note": "140 BPM (est.), energy 0.88, moods: triumphant, cinematic, aggressive, anthemic. Scenes: game trailer, fight scene, training montage, locker room. Use cases: trailer, game, sports, film. editorial: war-drum trap, coronation energy.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 140,
+     "confidence": "estimate"
+    },
+    "energy": 0.88,
+    "energy_provenance": "editorial",
+    "moods": [
+     "triumphant",
+     "cinematic",
+     "aggressive",
+     "anthemic"
+    ],
+    "energy_words": [
+     "explosive",
+     "relentless"
+    ],
+    "instrumentation": [
+     "808s",
+     "brass",
+     "trap hats"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": "unknown",
+    "explicit_provenance": "unknown"
+   },
+   "sync": {
+    "scenes": [
+     "game trailer",
+     "fight scene",
+     "training montage",
+     "locker room"
+    ],
+    "use_cases": [
+     "trailer",
+     "game",
+     "sports",
+     "film"
+    ],
+    "lyrical_themes": [
+     "power",
+     "legacy",
+     "conquest"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: war-drum trap, coronation energy"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  },
+  {
+   "track_id": "flex-my-flame",
+   "title": "Flex My Flame",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "7FQvcCS2CdTVsd6hb9jvHx",
+   "spotify_url": "https://open.spotify.com/track/7FQvcCS2CdTVsd6hb9jvHx",
+   "spotify_url_verified": true,
+   "match_note": "144 BPM (est.), energy 0.88, moods: aggressive, anthemic, electric. Scenes: club scene, training montage, locker room. Use cases: sports, film, game. editorial: gym-anthem trap, chest-out.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 144,
+     "confidence": "estimate"
+    },
+    "energy": 0.88,
+    "energy_provenance": "editorial",
+    "moods": [
+     "aggressive",
+     "anthemic",
+     "electric"
+    ],
+    "energy_words": [
+     "explosive",
+     "relentless"
+    ],
+    "instrumentation": [
+     "808s",
+     "trap hats",
+     "vocal chops"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "hard-edged rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "club scene",
+     "training montage",
+     "locker room"
+    ],
+    "use_cases": [
+     "sports",
+     "film",
+     "game"
+    ],
+    "lyrical_themes": [
+     "confidence",
+     "dominance",
+     "heat"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: gym-anthem trap, chest-out"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  }
+ ]
+}

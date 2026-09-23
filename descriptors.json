@@ -1,5 +1,5 @@
 {
-  "source": "CWI Sync department \u2014 editorial descriptors for search. Not audio analysis.",
+  "source": "CWI Sync department — editorial descriptors for search. Not audio analysis.",
   "descriptors": [
     {
       "track_id": "zooted-zone",
@@ -660,42 +660,8 @@
       "editorial_note": null
     },
     {
-      "track_id": "place-i-go-to-dream",
-      "title": "Place I Go to Dream",
-      "bpm_estimate": 78,
-      "energy": 0.3,
-      "moods": [
-        "hazy",
-        "melancholic"
-      ],
-      "energy_words": [
-        "simmering",
-        "hypnotic"
-      ],
-      "instrumentation": [
-        "piano",
-        "synth pads"
-      ],
-      "vocal_style": "melodic rap",
-      "scenes": [
-        "end credits",
-        "title sequence"
-      ],
-      "use_cases": [
-        "film",
-        "tv"
-      ],
-      "lyrical_themes": [
-        "longing",
-        "escape",
-        "stillness"
-      ],
-      "sounds_like_reference": "weightless rap lullaby",
-      "editorial_note": null
-    },
-    {
       "track_id": "place-i-go-to-dream-remastered",
-      "title": "Place I Go to Dream - Remastered",
+      "title": "Place I Go to Dream (Remastered)",
       "bpm_estimate": 78,
       "energy": 0.3,
       "moods": [
@@ -729,7 +695,7 @@
     },
     {
       "track_id": "place-i-go-to-dream-instrumental",
-      "title": "Place I Go to Dream - Instrumental",
+      "title": "Place I Go to Dream (Instrumental)",
       "bpm_estimate": 78,
       "energy": 0.3,
       "moods": [
@@ -759,7 +725,7 @@
         "space"
       ],
       "sounds_like_reference": "ambient piano bed, open sky",
-      "editorial_note": "Vocal labeled instrumental from title metadata only \u2014 not an asserted licensable instrumental."
+      "editorial_note": "Vocal labeled instrumental from title metadata only — not an asserted licensable instrumental."
     },
     {
       "track_id": "smokin-pain",

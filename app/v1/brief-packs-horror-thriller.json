@@ -1,0 +1,175 @@
+{
+ "schema": "cwi.brief-pack/1.0",
+ "pack_id": "horror-thriller",
+ "name": "Horror / Thriller",
+ "description": "Brooding, low-energy dread cues for horror/thriller film and TV: dark/brooding/melancholic moods, BPM 82-88 (est.), title sequence / end credits scenes. Quiet-room intensity, not club energy.",
+ "brief_targets": {
+  "moods": [
+   "dark",
+   "brooding",
+   "melancholic",
+   "cinematic"
+  ],
+  "energy_min": 0.3,
+  "bpm_min": 82,
+  "bpm_max": 88,
+  "scenes": [
+   "title sequence",
+   "end credits",
+   "nighttime driving"
+  ],
+  "use_cases": [
+   "film",
+   "tv"
+  ]
+ },
+ "catalog_id": "cwi.tbhh.sync-catalog",
+ "catalog_ref": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+ "pack_url": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-horror-thriller.json",
+ "track_count": 2,
+ "rights_summary": {
+  "one_stop_claimed": false,
+  "pre_cleared_claimed": false,
+  "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Sync clears directly via hp@cumulativeweb.com.",
+  "source": "verified"
+ },
+ "tracks": [
+  {
+   "track_id": "spirits-shadows",
+   "title": "Spirits n Shadows",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "2tEdW6WKfcs2NGI6OIvAm6",
+   "spotify_url": "https://open.spotify.com/track/2tEdW6WKfcs2NGI6OIvAm6",
+   "spotify_url_verified": true,
+   "match_note": "88 BPM (est.), energy 0.5, moods: dark, brooding, melancholic. Scenes: nighttime driving, end credits, title sequence. Use cases: film, tv. editorial: midnight-confessional rap, heavy air.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 88,
+     "confidence": "estimate"
+    },
+    "energy": 0.5,
+    "energy_provenance": "editorial",
+    "moods": [
+     "dark",
+     "brooding",
+     "melancholic"
+    ],
+    "energy_words": [
+     "simmering",
+     "hypnotic"
+    ],
+    "instrumentation": [
+     "piano",
+     "strings",
+     "synth pads"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "melodic rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "nighttime driving",
+     "end credits",
+     "title sequence"
+    ],
+    "use_cases": [
+     "film",
+     "tv"
+    ],
+    "lyrical_themes": [
+     "ghosts",
+     "memory",
+     "weight"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: midnight-confessional rap, heavy air"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  },
+  {
+   "track_id": "tears-scars",
+   "title": "Tears and Scars",
+   "artist": "That Boy Hi Hat",
+   "spotify_id": "6NfxhZ4NebIduGEKZeD2Lk",
+   "spotify_url": "https://open.spotify.com/track/6NfxhZ4NebIduGEKZeD2Lk",
+   "spotify_url_verified": true,
+   "match_note": "82 BPM (est.), energy 0.4, moods: melancholic, brooding, cinematic. Scenes: end credits, title sequence. Use cases: film, tv. editorial: piano-led rap elegy, quiet room.",
+   "descriptors_provenance": "editorial",
+   "audio": {
+    "bpm": {
+     "value": 82,
+     "confidence": "estimate"
+    },
+    "energy": 0.4,
+    "energy_provenance": "editorial",
+    "moods": [
+     "melancholic",
+     "brooding",
+     "cinematic"
+    ],
+    "energy_words": [
+     "simmering"
+    ],
+    "instrumentation": [
+     "piano",
+     "strings"
+    ],
+    "vocal": {
+     "type": "male",
+     "type_provenance": "verified",
+     "style": "melodic rap",
+     "style_provenance": "editorial"
+    },
+    "explicit": true,
+    "explicit_provenance": "spotify_metadata"
+   },
+   "sync": {
+    "scenes": [
+     "end credits",
+     "title sequence"
+    ],
+    "use_cases": [
+     "film",
+     "tv"
+    ],
+    "lyrical_themes": [
+     "pain",
+     "healing",
+     "memory"
+    ],
+    "lyrical_themes_provenance": "editorial",
+    "sounds_like_reference": "editorial: piano-led rap elegy, quiet room"
+   },
+   "rights": {
+    "status": "direct-clearance",
+    "one_stop": false,
+    "pre_cleared": false,
+    "contact": "hp@cumulativeweb.com",
+    "provenance": "verified",
+    "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
+   },
+   "credits": {
+    "origin": "Frederick, MD",
+    "provenance": "verified"
+   }
+  }
+ ]
+}

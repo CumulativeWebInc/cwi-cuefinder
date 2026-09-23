@@ -2,7 +2,7 @@
   "catalog": "cwi.sync-catalog/1.0",
   "catalog_id": "cwi.tbhh.sync-catalog",
   "schema_version": "1.0.0",
-  "generated": "2026-09-16",
+  "generated": "2026-09-23",
   "maintainer": "Cumulative Web Inc",
   "artist": "That Boy Hi Hat",
   "artist_spotify_url": "https://open.spotify.com/artist/2f9j460EwjfvjYp3trBcb7",
@@ -90,7 +90,7 @@
       "vocal chops"
     ]
   },
-  "track_count": 24,
+  "track_count": 23,
   "tracks": [
     {
       "track_id": "zooted-zone",
@@ -453,8 +453,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -533,8 +533,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -614,8 +614,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -693,8 +693,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -738,7 +738,7 @@
     },
     {
       "track_id": "warped-wicked",
-      "title": "Warped and Wicked",
+      "title": "Warped & Wicked",
       "artist": "That Boy Hi Hat",
       "spotify_id": "3w4RKguHAT2xd9K0w5CklC",
       "spotify_url": "https://open.spotify.com/track/3w4RKguHAT2xd9K0w5CklC",
@@ -772,8 +772,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -851,8 +851,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -930,8 +930,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1007,8 +1007,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1085,8 +1085,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1161,8 +1161,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1204,7 +1204,7 @@
     },
     {
       "track_id": "toxic-elements",
-      "title": "Toxic Elements",
+      "title": "Toxic Element",
       "artist": "That Boy Hi Hat",
       "spotify_id": "2aTbpxiF2jNiB3PGi81oqa",
       "spotify_url": "https://open.spotify.com/track/2aTbpxiF2jNiB3PGi81oqa",
@@ -1238,8 +1238,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1316,8 +1316,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1394,8 +1394,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1438,82 +1438,8 @@
       "editorial_note": null
     },
     {
-      "track_id": "place-i-go-to-dream",
-      "title": "Place I Go to Dream",
-      "artist": "That Boy Hi Hat",
-      "spotify_id": "3KX10tZBft6gp2Nea9HZOB",
-      "spotify_url": "https://open.spotify.com/track/3KX10tZBft6gp2Nea9HZOB",
-      "spotify_url_verified": true,
-      "descriptors_provenance": "editorial",
-      "audio": {
-        "bpm": {
-          "value": 78,
-          "confidence": "estimate"
-        },
-        "energy": 0.3,
-        "energy_provenance": "editorial",
-        "moods": [
-          "hazy",
-          "melancholic"
-        ],
-        "energy_words": [
-          "simmering",
-          "hypnotic"
-        ],
-        "instrumentation": [
-          "piano",
-          "synth pads"
-        ],
-        "vocal": {
-          "type": "male",
-          "type_provenance": "verified",
-          "style": "melodic rap",
-          "style_provenance": "editorial"
-        },
-        "explicit": false,
-        "explicit_provenance": "spotify_metadata"
-      },
-      "sync": {
-        "scenes": [
-          "end credits",
-          "title sequence"
-        ],
-        "use_cases": [
-          "film",
-          "tv"
-        ],
-        "lyrical_themes": [
-          "longing",
-          "escape",
-          "stillness"
-        ],
-        "lyrical_themes_provenance": "editorial",
-        "sounds_like_reference": "editorial: weightless rap lullaby"
-      },
-      "rights": {
-        "status": "direct-clearance",
-        "one_stop": false,
-        "pre_cleared": false,
-        "contact": "hp@cumulativeweb.com",
-        "provenance": "verified",
-        "note": "No one-stop or pre-cleared rights claims are made (cwi-learn catalog_facts). Every placement clears directly."
-      },
-      "credits": {
-        "origin": "Frederick, MD",
-        "provenance": "verified"
-      },
-      "pipeline": {
-        "spotify": "live",
-        "youtube": "checklist",
-        "disco": "checklist",
-        "sourceaudio": "checklist",
-        "note": "Guidance, not placement status."
-      },
-      "editorial_note": null
-    },
-    {
       "track_id": "place-i-go-to-dream-remastered",
-      "title": "Place I Go to Dream - Remastered",
+      "title": "Place I Go to Dream (Remastered)",
       "artist": "That Boy Hi Hat",
       "spotify_id": "31MTBSMfWy4jGEYAilkaH8",
       "spotify_url": "https://open.spotify.com/track/31MTBSMfWy4jGEYAilkaH8",
@@ -1544,8 +1470,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": false,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1587,7 +1513,7 @@
     },
     {
       "track_id": "place-i-go-to-dream-instrumental",
-      "title": "Place I Go to Dream - Instrumental",
+      "title": "Place I Go to Dream (Instrumental)",
       "artist": "That Boy Hi Hat",
       "spotify_id": "3tKoMnnlkcRr7wE3PUQ9bp",
       "spotify_url": "https://open.spotify.com/track/3tKoMnnlkcRr7wE3PUQ9bp",
@@ -1618,8 +1544,8 @@
           "style": "n/a",
           "style_provenance": "editorial"
         },
-        "explicit": false,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1694,8 +1620,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1773,8 +1699,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1852,8 +1778,8 @@
           "style": "hard-edged rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [
@@ -1931,8 +1857,8 @@
           "style": "melodic rap",
           "style_provenance": "editorial"
         },
-        "explicit": true,
-        "explicit_provenance": "spotify_metadata"
+        "explicit": "unknown",
+        "explicit_provenance": "unknown"
       },
       "sync": {
         "scenes": [

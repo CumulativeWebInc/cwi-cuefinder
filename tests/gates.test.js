@@ -27,8 +27,8 @@ const QA3 = [
   ["simmering melancholic end credits", "Tears and Scars"],
   ["club scene 140 bpm", "Flex My Flame"],
   ["neon city futuristic", "Neon Nights Pt. 777"],
-  ["no vocals", "Place I Go to Dream - Instrumental"],
-  ["heist sequence menacing", "Toxic Elements"],
+  ["no vocals", "Place I Go to Dream (Instrumental)"],
+  ["heist sequence menacing", "Toxic Element"],
   ["zz", "Zooted Zone"]
 ];
 const qa3tops = QA3.map(([q, want]) => {
