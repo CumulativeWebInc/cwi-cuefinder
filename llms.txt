@@ -1,0 +1,25 @@
+# CueFinder — Search like a supervisor thinks. (for AI agents)
+
+Natural-language sync search over the 24-track That Boy Hi Hat catalog: moods, BPM, instrumentation, scenes, use cases — with transparent match explanations and a DIRECT CLEARANCE badge on every result.
+
+Live: https://cumulativewebinc.github.io/cwi-cuefinder/
+Operator: Cumulative Web Inc (Agent Deck SKU #40)
+
+## Machine-readable
+
+- `agent_card`: .well-known/agent-card.json
+- `brief_packs`: v1/brief-packs (5 machine-readable sync brief packs)
+- `discovery_note`: discovery.txt
+- `embed`: embed.html
+- `sync_catalog`: sync-catalog.json
+- `sync_catalog_v1`: v1/sync-catalog.json
+
+## Honest limits
+
+Editorial descriptors are curation, never audio analysis. Every BPM is an estimate, labeled est. Rights: no one-stop or pre-cleared claims — clearance is direct via hp@cumulativeweb.com.
+
+## Use it
+
+Describe the scene — mood, energy, BPM, instruments. Every result shows exactly why it matched. Rights: direct clearance via hp@cumulativeweb.com (no one-stop / pre-cleared claims).
+
+Contact: hp@cumulativeweb.com · Source: https://github.com/CumulativeWebInc/cwi-cuefinder
