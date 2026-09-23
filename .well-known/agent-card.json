@@ -1,51 +1,52 @@
 {
- "schema_version": "1.0",
- "agent_card": "cwi.agent-card/1.0",
- "catalog": {
-  "artist": "That Boy Hi Hat",
-  "catalog_id": "cwi.tbhh.sync-catalog",
-  "provenance_classes": [
-   "verified",
-   "editorial",
-   "estimate"
-  ],
-  "rights": {
-   "clearance": "hp@cumulativeweb.com",
-   "one_stop_claimed": false,
-   "pre_cleared_claimed": false
+  "schema_version": "1.0",
+  "agent_card": "cwi.agent-card/1.0",
+  "catalog": {
+    "artist": "That Boy Hi Hat",
+    "catalog_id": "cwi.tbhh.sync-catalog",
+    "provenance_classes": [
+      "verified",
+      "editorial",
+      "estimate"
+    ],
+    "rights": {
+      "clearance": "hp@cumulativeweb.com",
+      "one_stop_claimed": false,
+      "pre_cleared_claimed": false
+    },
+    "track_count": 24
   },
-  "track_count": 24
- },
- "contact": "hp@cumulativeweb.com",
- "description": "AI sync-discovery engine over the That Boy Hi Hat catalog (24 tracks, alternative rap / Post-Trap Futurism). Natural-language queries resolve against mood, energy, BPM, instrumentation, vocal type, lyrics, scenes, and use cases, with transparent per-result match explanations.",
- "for_agents": "Fetch sync-catalog.json (or pin /v1/sync-catalog.json). Respect the verified / editorial / estimate provenance labels on every field. Cite track facts with their labels. Do not assert facts beyond the catalog.",
- "name": "CueFinder",
- "operator": "Cumulative Web Inc",
- "tagline": "Search like a supervisor thinks.",
- "urls": {
-  "app": "https://cumulativewebinc.github.io/cwi-cuefinder/",
-  "discovery_note": "https://cumulativewebinc.github.io/cwi-cuefinder/discovery.txt",
-  "source_catalog": "https://cumulativewebinc.github.io/cwi-learn/catalog.json",
-  "sync_catalog": "https://cumulativewebinc.github.io/cwi-cuefinder/sync-catalog.json",
-  "sync_catalog_v1": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
-  "brief_packs": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs",
-  "brief_packs_json": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs.json",
-  "brief_packs_index": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/index.json"
- },
- "brief_packs": {
-  "schema": "cwi.brief-packs/1.0",
-  "pack_count": 5,
-  "packs": {
-   "sports-hype": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sports-hype.json",
-   "trailer-tension": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-trailer-tension.json",
-   "fashion-film": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-fashion-film.json",
-   "horror-thriller": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-horror-thriller.json",
-   "sneaker-commercial": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sneaker-commercial.json"
+  "contact": "hp@cumulativeweb.com",
+  "description": "AI sync-discovery engine over the That Boy Hi Hat catalog (24 tracks, alternative rap / Post-Trap Futurism). Natural-language queries resolve against mood, energy, BPM, instrumentation, vocal type, lyrics, scenes, and use cases, with transparent per-result match explanations.",
+  "for_agents": "Fetch sync-catalog.json (or pin /v1/sync-catalog.json). Respect the verified / editorial / estimate provenance labels on every field. Cite track facts with their labels. Do not assert facts beyond the catalog.",
+  "name": "CueFinder",
+  "operator": "Cumulative Web Inc",
+  "tagline": "Search like a supervisor thinks.",
+  "urls": {
+    "app": "https://cumulativewebinc.github.io/cwi-cuefinder/",
+    "discovery_note": "https://cumulativewebinc.github.io/cwi-cuefinder/discovery.txt",
+    "source_catalog": "https://cumulativewebinc.github.io/cwi-learn/catalog.json",
+    "sync_catalog": "https://cumulativewebinc.github.io/cwi-cuefinder/sync-catalog.json",
+    "sync_catalog_v1": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/sync-catalog.json",
+    "brief_packs": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs",
+    "brief_packs_json": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs.json",
+    "brief_packs_index": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/index.json"
   },
-  "rights": {
-   "clearance": "hp@cumulativeweb.com",
-   "one_stop_claimed": false,
-   "pre_cleared_claimed": false
-  }
- }
+  "brief_packs": {
+    "schema": "cwi.brief-packs/1.0",
+    "pack_count": 5,
+    "packs": {
+      "sports-hype": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sports-hype.json",
+      "trailer-tension": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-trailer-tension.json",
+      "fashion-film": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-fashion-film.json",
+      "horror-thriller": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-horror-thriller.json",
+      "sneaker-commercial": "https://cumulativewebinc.github.io/cwi-cuefinder/v1/brief-packs-sneaker-commercial.json"
+    },
+    "rights": {
+      "clearance": "hp@cumulativeweb.com",
+      "one_stop_claimed": false,
+      "pre_cleared_claimed": false
+    }
+  },
+  "url": "https://cumulativewebinc.github.io/cwi-cuefinder/"
 }
