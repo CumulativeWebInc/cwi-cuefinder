@@ -1,0 +1,70 @@
+{
+ "id": "rt-2026-09-23",
+ "target": "CueFinder OS retrofit (https://cumulativewebinc.github.io/cwi-cuefinder/)",
+ "attacker_urn": "urn:cwi:agent:retrofit-wave2-worker",
+ "started_at": "2026-09-23T12:00:00Z",
+ "completed_at": "2026-09-23T12:30:00Z",
+ "verdict": "cleared",
+ "checklist": [
+  {
+   "item": "failure-modes",
+   "disposition": "passed",
+   "finding": "67/67 gate checks; query parser fallbacks documented"
+  },
+  {
+   "item": "exploit-vectors",
+   "disposition": "passed",
+   "finding": "static; rank() pure \u2014 no DOM, no network, no user-data egress"
+  },
+  {
+   "item": "weakest-assumption",
+   "disposition": "mitigated",
+   "finding": "moods/scenes are editorial curation \u2014 labeled verified/editorial/estimate on every field"
+  },
+  {
+   "item": "scale-10x",
+   "disposition": "passed",
+   "finding": "token index precomputed once; ranking avg <1ms (gate <50ms)"
+  },
+  {
+   "item": "scale-100x",
+   "disposition": "passed",
+   "finding": "engine pure; 10k-track path documented in README"
+  },
+  {
+   "item": "api-disappearance",
+   "disposition": "mitigated",
+   "finding": "Spotify oembed is enhancement only; catalog is local JSON"
+  },
+  {
+   "item": "data-corruption",
+   "disposition": "passed",
+   "finding": "versioned /v1/ catalog + changelog"
+  },
+  {
+   "item": "unexpected-users",
+   "disposition": "passed",
+   "finding": "query state in URL hash; copy-search-link sharing"
+  },
+  {
+   "item": "credential-leak",
+   "disposition": "passed",
+   "finding": "no credentials anywhere; secret scan clean"
+  },
+  {
+   "item": "hallucination",
+   "disposition": "passed",
+   "finding": "transparent match explanations; missed tokens struck through; no invented facts"
+  },
+  {
+   "item": "malicious-instructions",
+   "disposition": "passed",
+   "finding": "query grammar has no instruction surface"
+  },
+  {
+   "item": "memory-poisoning",
+   "disposition": "passed",
+   "finding": "no memory surface"
+  }
+ ]
+}
