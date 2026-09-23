@@ -1,0 +1,19 @@
+{
+ "project": "retrofit-cwi-cuefinder",
+ "name": "CueFinder",
+ "sku": "Agent Deck SKU #40",
+ "url": "https://cumulativewebinc.github.io/cwi-cuefinder/",
+ "retrofit_date": "2026-09-23",
+ "tests": "BLOCKED (see gates evidence)",
+ "invariants": [
+  "rights language exact",
+  "verified/editorial/estimate labels",
+  "24-track catalog facts"
+ ],
+ "theorem": "INCOMPLETE",
+ "missing_gates": [
+  "tests-executed: gate not passed",
+  "metrics-exist: gate not passed",
+  "monitoring-exists: gate not passed"
+ ]
+}
