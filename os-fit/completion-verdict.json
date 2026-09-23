@@ -158,6 +158,6 @@
   "metrics-exist: gate not passed",
   "monitoring-exists: gate not passed"
  ],
- "evaluated_at": "2026-09-23T11:48:18.424Z",
+ "evaluated_at": "2026-09-23T12:01:05.086Z",
  "evaluated_by_urn": "urn:cwi:agent:retrofit-wave2-worker"
 }
