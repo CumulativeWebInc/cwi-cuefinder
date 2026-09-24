@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CueFinder (#40)",
+  "url": "https://cumulativewebinc.github.io/cwi-cuefinder/",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Web",
+  "author": {
+    "@type": "Organization",
+    "name": "Cumulative Web Inc",
+    "url": "https://cumulativeweb.com/"
+  },
+  "description": "Command-palette natural-language sync search over 24 tracks with timing readouts and clearance badges."
+}
