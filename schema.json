@@ -10,5 +10,6 @@
     "name": "Cumulative Web Inc",
     "url": "https://cumulativeweb.com/"
   },
-  "description": "Command-palette natural-language sync search over 24 tracks with timing readouts and clearance badges."
+  "description": "Command-palette natural-language sync search over 24 tracks with timing readouts and clearance badges.",
+  "schema_version": "1.0.0"
 }
