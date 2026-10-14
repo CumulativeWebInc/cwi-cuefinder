@@ -1298,6 +1298,11 @@
         "energy_provenance": "editorial",
         "moods": [
           "cinematic",
+          "ethereal",
+          "mystical",
+          "spiritual",
+          "atmospheric",
+          "uplifting",
           "triumphant",
           "brooding"
         ],
