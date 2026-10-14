@@ -590,6 +590,11 @@
       "energy": 0.58,
       "moods": [
         "cinematic",
+        "ethereal",
+        "mystical",
+        "spiritual",
+        "atmospheric",
+        "uplifting",
         "triumphant",
         "brooding"
       ],
