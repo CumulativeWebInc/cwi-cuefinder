@@ -19,7 +19,7 @@
     "source": "verified"
   },
   "descriptor_provenance": {
-    "note": "All sonic/scene descriptors are editorial — curated by the CWI Sync department for search. Never audio-analysis output. BPM values are estimates.",
+    "note": "All sonic/scene descriptors are editorial \u2014 curated by the CWI Sync department for search. Never audio-analysis output. BPM values are estimates.",
     "moods": "editorial",
     "energy": "editorial",
     "energy_words": "editorial",
@@ -1662,7 +1662,7 @@
         "sourceaudio": "checklist",
         "note": "Guidance, not placement status."
       },
-      "editorial_note": "Vocal labeled instrumental from title metadata only — not an asserted licensable instrumental."
+      "editorial_note": "Vocal labeled instrumental from title metadata only \u2014 not an asserted licensable instrumental."
     },
     {
       "track_id": "smokin-pain",
@@ -2035,6 +2035,10 @@
       },
       "credits": {
         "origin": "Frederick, MD",
+        "producers": "Kokurcho, Black Lansky (executive co-producer)",
+        "studio": "Cue Recording Studios, Falls Church, Virginia",
+        "isrc": "QTA2X2675077",
+        "upc": "700563274374",
         "provenance": "verified"
       },
       "pipeline": {
@@ -2044,7 +2048,7 @@
         "sourceaudio": "checklist",
         "note": "Guidance, not placement status."
       },
-      "editorial_note": "Single out 2026-11-20. Presave: https://distrokid.com/hyperfollow/thatboyhihat/cyberpunk-2027. ISRC QTA2X2675077. Producers: Kokurcho, Black Lansky."
+      "editorial_note": "Single out 2026-11-20. Presave: https://distrokid.com/hyperfollow/thatboyhihat/cyberpunk-2027. ISRC QTA2X2675077. UPC 700563274374. Producers: Kokurcho, Black Lansky (exec co-producer). Recorded at Cue Recording Studios, Falls Church, Virginia."
     }
   ]
 }
