@@ -141,7 +141,9 @@
      "film",
      "tv",
      "game",
-     "sports"
+     "sports",
+     "walkout",
+     "boxing"
     ],
     "lyrical_themes": [
      "ambition",
@@ -196,7 +198,8 @@
      "triumphant",
      "cinematic",
      "aggressive",
-     "anthemic"
+     "anthemic",
+     "motivational"
     ],
     "energy_words": [
      "explosive",
@@ -227,7 +230,11 @@
      "trailer",
      "game",
      "sports",
-     "film"
+     "film",
+     "motivational",
+     "comeback story",
+     "walkout",
+     "boxing"
     ],
     "lyrical_themes": [
      "power",
@@ -278,7 +285,10 @@
     "moods": [
      "hazy",
      "euphoric",
-     "cinematic"
+     "cinematic",
+     "cool",
+     "understated",
+     "chill"
     ],
     "energy_words": [
      "cruising",
@@ -307,7 +317,12 @@
     "use_cases": [
      "fashion film",
      "film",
-     "ad"
+     "ad",
+     "streetwear",
+     "brand video",
+     "chill background",
+     "coding stream",
+     "background"
     ],
     "lyrical_themes": [
      "luxury",
@@ -359,7 +374,9 @@
      "dark",
      "brooding",
      "cinematic",
-     "hazy"
+     "hazy",
+     "cool",
+     "understated"
     ],
     "energy_words": [
      "simmering",
@@ -389,7 +406,9 @@
     "use_cases": [
      "fashion film",
      "film",
-     "tv"
+     "tv",
+     "streetwear",
+     "brand video"
     ],
     "lyrical_themes": [
      "temptation",
@@ -472,7 +491,9 @@
     "use_cases": [
      "film",
      "sports",
-     "game"
+     "game",
+     "walkout",
+     "boxing"
     ],
     "lyrical_themes": [
      "defiance",
@@ -609,7 +630,8 @@
      "anthemic",
      "triumphant",
      "aggressive",
-     "electric"
+     "electric",
+     "motivational"
     ],
     "energy_words": [
      "explosive",
@@ -639,7 +661,11 @@
     "use_cases": [
      "trailer",
      "sports",
-     "game"
+     "game",
+     "motivational",
+     "comeback story",
+     "walkout",
+     "boxing"
     ],
     "lyrical_themes": [
      "victory",
@@ -690,7 +716,9 @@
     "moods": [
      "hazy",
      "brooding",
-     "cinematic"
+     "cinematic",
+     "cool",
+     "understated"
     ],
     "energy_words": [
      "simmering",
@@ -719,7 +747,9 @@
     "use_cases": [
      "fashion film",
      "film",
-     "tv"
+     "tv",
+     "streetwear",
+     "brand video"
     ],
     "lyrical_themes": [
      "desire",
@@ -852,7 +882,8 @@
     "moods": [
      "triumphant",
      "cinematic",
-     "anthemic"
+     "anthemic",
+     "motivational"
     ],
     "energy_words": [
      "soaring",
@@ -882,7 +913,9 @@
      "fashion film",
      "ad",
      "sports",
-     "film"
+     "film",
+     "motivational",
+     "comeback story"
     ],
     "lyrical_themes": [
      "success",
@@ -1041,7 +1074,9 @@
     "use_cases": [
      "sports",
      "film",
-     "game"
+     "game",
+     "walkout",
+     "boxing"
     ],
     "lyrical_themes": [
      "confidence",
@@ -1090,7 +1125,8 @@
     "moods": [
      "hazy",
      "euphoric",
-     "melancholic"
+     "melancholic",
+     "chill"
     ],
     "energy_words": [
      "cruising",
@@ -1119,7 +1155,10 @@
     "use_cases": [
      "film",
      "ad",
-     "fashion film"
+     "fashion film",
+     "chill background",
+     "coding stream",
+     "background"
     ],
     "lyrical_themes": [
      "hope",
@@ -1328,7 +1367,8 @@
      "atmospheric",
      "uplifting",
      "triumphant",
-     "brooding"
+     "brooding",
+     "chill"
     ],
     "energy_words": [
      "soaring",
@@ -1357,7 +1397,10 @@
     "use_cases": [
      "trailer",
      "film",
-     "tv"
+     "tv",
+     "chill background",
+     "coding stream",
+     "background"
     ],
     "lyrical_themes": [
      "judgment",
@@ -1485,7 +1528,8 @@
     "energy_provenance": "editorial",
     "moods": [
      "hazy",
-     "melancholic"
+     "melancholic",
+     "chill"
     ],
     "energy_words": [
      "simmering",
@@ -1511,7 +1555,10 @@
     ],
     "use_cases": [
      "film",
-     "tv"
+     "tv",
+     "chill background",
+     "coding stream",
+     "background"
     ],
     "lyrical_themes": [
      "longing",
@@ -1901,7 +1948,9 @@
     "use_cases": [
      "sports",
      "film",
-     "game"
+     "game",
+     "walkout",
+     "boxing"
     ],
     "lyrical_themes": [
      "rebellion",
@@ -1950,7 +1999,8 @@
     "moods": [
      "hazy",
      "euphoric",
-     "cinematic"
+     "cinematic",
+     "chill"
     ],
     "energy_words": [
      "cruising",
@@ -1979,7 +2029,10 @@
     "use_cases": [
      "fashion film",
      "ad",
-     "film"
+     "film",
+     "chill background",
+     "coding stream",
+     "background"
     ],
     "lyrical_themes": [
      "romance",
