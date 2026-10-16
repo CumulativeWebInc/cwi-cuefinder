@@ -301,7 +301,9 @@
      "cool",
      "understated",
      "chill",
-     "romantic"
+     "romantic",
+     "smooth",
+     "confident"
     ],
     "energy_words": [
      "cruising",
@@ -340,7 +342,10 @@
      "montage",
      "sneaker ad",
      "sneaker",
-     "non-explicit"
+     "non-explicit",
+     "luxury",
+     "luxury car",
+     "commercial"
     ],
     "lyrical_themes": [
      "luxury",
@@ -428,7 +433,10 @@
      "streetwear",
      "brand video",
      "podcast intro",
-     "podcast"
+     "podcast",
+     "luxury",
+     "luxury car",
+     "commercial"
     ],
     "lyrical_themes": [
      "temptation",
@@ -788,7 +796,10 @@
      "streetwear",
      "brand video",
      "romantic",
-     "montage"
+     "montage",
+     "luxury",
+     "luxury car",
+     "commercial"
     ],
     "lyrical_themes": [
      "desire",
@@ -927,7 +938,9 @@
      "triumphant",
      "cinematic",
      "anthemic",
-     "motivational"
+     "motivational",
+     "smooth",
+     "confident"
     ],
     "energy_words": [
      "soaring",
@@ -961,7 +974,10 @@
      "motivational",
      "comeback story",
      "sneaker ad",
-     "sneaker"
+     "sneaker",
+     "luxury",
+     "luxury car",
+     "commercial"
     ],
     "lyrical_themes": [
      "success",
