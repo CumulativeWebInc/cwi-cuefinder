@@ -245,7 +245,8 @@
      "sneaker ad",
      "sneaker",
      "gaming montage",
-     "montage"
+     "montage",
+     "non-explicit"
     ],
     "lyrical_themes": [
      "power",
@@ -338,7 +339,8 @@
      "romantic",
      "montage",
      "sneaker ad",
-     "sneaker"
+     "sneaker",
+     "non-explicit"
     ],
     "lyrical_themes": [
      "luxury",
@@ -2208,6 +2210,98 @@
    "editorial_note": "Single out 2026-11-20. Presave: https://distrokid.com/hyperfollow/thatboyhihat/cyberpunk-2027. ISRC QTA2X2675077. UPC 700563274374. Producers: Kokurcho, Black Lansky (exec co-producer). Recorded at Cue Recording Studios, Falls Church, Virginia.",
    "isrc": "QTA2X2675077",
    "isrc_provenance": "verified"
+  },
+  {
+   "track_id": "dre50-pix",
+   "title": "Pix",
+   "artist": "Dre50",
+   "isrc": "QZFY22531105",
+   "isrc_provenance": "verified",
+   "audio": {
+    "moods": [
+     "energetic",
+     "festive",
+     "upbeat",
+     "danceable"
+    ],
+    "energy_words": [
+     "high energy",
+     "dance"
+    ],
+    "instrumentation": [
+     "percussion",
+     "bass",
+     "synths"
+    ]
+   },
+   "sync": {
+    "scenes": [
+     "party scene",
+     "carnival",
+     "dance sequence"
+    ],
+    "use_cases": [
+     "carnival",
+     "carnival promo",
+     "funk",
+     "ad",
+     "party"
+    ],
+    "lyrical_themes": [
+     "celebration",
+     "energy"
+    ]
+   },
+   "rights": {
+    "status": "one-stop",
+    "one_stop": true
+   }
+  },
+  {
+   "track_id": "dre50-vai-vem-vem",
+   "title": "Vai Vem Vem",
+   "artist": "Dre50",
+   "isrc": "QTA2U2645608",
+   "isrc_provenance": "verified",
+   "audio": {
+    "moods": [
+     "energetic",
+     "festive",
+     "upbeat",
+     "danceable"
+    ],
+    "energy_words": [
+     "high energy",
+     "dance"
+    ],
+    "instrumentation": [
+     "percussion",
+     "bass",
+     "synths"
+    ]
+   },
+   "sync": {
+    "scenes": [
+     "party scene",
+     "carnival",
+     "dance sequence"
+    ],
+    "use_cases": [
+     "carnival",
+     "carnival promo",
+     "funk",
+     "ad",
+     "party"
+    ],
+    "lyrical_themes": [
+     "celebration",
+     "movement"
+    ]
+   },
+   "rights": {
+    "status": "one-stop",
+    "one_stop": true
+   }
   }
  ]
 }
