@@ -110,7 +110,8 @@
      "dark",
      "aggressive",
      "anthemic",
-     "electric"
+     "electric",
+     "punchy"
     ],
     "energy_words": [
      "relentless",
@@ -143,7 +144,13 @@
      "game",
      "sports",
      "walkout",
-     "boxing"
+     "boxing",
+     "podcast intro",
+     "podcast",
+     "gaming montage",
+     "montage",
+     "swagger",
+     "street"
     ],
     "lyrical_themes": [
      "ambition",
@@ -234,7 +241,11 @@
      "motivational",
      "comeback story",
      "walkout",
-     "boxing"
+     "boxing",
+     "sneaker ad",
+     "sneaker",
+     "gaming montage",
+     "montage"
     ],
     "lyrical_themes": [
      "power",
@@ -288,7 +299,8 @@
      "cinematic",
      "cool",
      "understated",
-     "chill"
+     "chill",
+     "romantic"
     ],
     "energy_words": [
      "cruising",
@@ -322,7 +334,11 @@
      "brand video",
      "chill background",
      "coding stream",
-     "background"
+     "background",
+     "romantic",
+     "montage",
+     "sneaker ad",
+     "sneaker"
     ],
     "lyrical_themes": [
      "luxury",
@@ -408,7 +424,9 @@
      "film",
      "tv",
      "streetwear",
-     "brand video"
+     "brand video",
+     "podcast intro",
+     "podcast"
     ],
     "lyrical_themes": [
      "temptation",
@@ -462,7 +480,9 @@
     "moods": [
      "aggressive",
      "electric",
-     "anthemic"
+     "anthemic",
+     "punchy",
+     "confident"
     ],
     "energy_words": [
      "relentless",
@@ -493,7 +513,13 @@
      "sports",
      "game",
      "walkout",
-     "boxing"
+     "boxing",
+     "podcast intro",
+     "podcast",
+     "gaming montage",
+     "montage",
+     "swagger",
+     "street"
     ],
     "lyrical_themes": [
      "defiance",
@@ -547,7 +573,8 @@
      "euphoric",
      "hazy",
      "electric",
-     "cyberpunk"
+     "cyberpunk",
+     "energetic"
     ],
     "energy_words": [
      "cruising",
@@ -578,7 +605,11 @@
      "game",
      "film",
      "tv",
-     "ad"
+     "ad",
+     "anime",
+     "anime opening",
+     "sneaker ad",
+     "sneaker"
     ],
     "lyrical_themes": [
      "escape",
@@ -631,7 +662,8 @@
      "triumphant",
      "aggressive",
      "electric",
-     "motivational"
+     "motivational",
+     "confident"
     ],
     "energy_words": [
      "explosive",
@@ -665,7 +697,9 @@
      "motivational",
      "comeback story",
      "walkout",
-     "boxing"
+     "boxing",
+     "swagger",
+     "street"
     ],
     "lyrical_themes": [
      "victory",
@@ -718,7 +752,8 @@
      "brooding",
      "cinematic",
      "cool",
-     "understated"
+     "understated",
+     "romantic"
     ],
     "energy_words": [
      "simmering",
@@ -749,7 +784,9 @@
      "film",
      "tv",
      "streetwear",
-     "brand video"
+     "brand video",
+     "romantic",
+     "montage"
     ],
     "lyrical_themes": [
      "desire",
@@ -801,7 +838,8 @@
      "dark",
      "menacing",
      "futuristic",
-     "aggressive"
+     "aggressive",
+     "gritty"
     ],
     "energy_words": [
      "relentless",
@@ -831,7 +869,11 @@
     "use_cases": [
      "trailer",
      "game",
-     "film"
+     "film",
+     "horror",
+     "horror film",
+     "documentary",
+     "gritty"
     ],
     "lyrical_themes": [
      "menace",
@@ -915,7 +957,9 @@
      "sports",
      "film",
      "motivational",
-     "comeback story"
+     "comeback story",
+     "sneaker ad",
+     "sneaker"
     ],
     "lyrical_themes": [
      "success",
@@ -966,7 +1010,8 @@
     "moods": [
      "dark",
      "brooding",
-     "melancholic"
+     "melancholic",
+     "moody"
     ],
     "energy_words": [
      "simmering",
@@ -994,7 +1039,10 @@
     ],
     "use_cases": [
      "film",
-     "tv"
+     "tv",
+     "visualizer",
+     "mixtape",
+     "intro"
     ],
     "lyrical_themes": [
      "ghosts",
@@ -1313,7 +1361,11 @@
     "use_cases": [
      "trailer",
      "game",
-     "film"
+     "film",
+     "horror",
+     "horror film",
+     "documentary",
+     "gritty"
     ],
     "lyrical_themes": [
      "danger",
@@ -1400,7 +1452,10 @@
      "tv",
      "chill background",
      "coding stream",
-     "background"
+     "background",
+     "visualizer",
+     "mixtape",
+     "intro"
     ],
     "lyrical_themes": [
      "judgment",
@@ -1757,7 +1812,8 @@
     "moods": [
      "brooding",
      "melancholic",
-     "aggressive"
+     "aggressive",
+     "gritty"
     ],
     "energy_words": [
      "simmering",
@@ -1786,7 +1842,9 @@
     "use_cases": [
      "film",
      "tv",
-     "sports"
+     "sports",
+     "documentary",
+     "gritty"
     ],
     "lyrical_themes": [
      "hurt",
@@ -1837,7 +1895,8 @@
      "futuristic",
      "dark",
      "hazy",
-     "cyberpunk"
+     "cyberpunk",
+     "moody"
     ],
     "energy_words": [
      "hypnotic",
@@ -1867,7 +1926,14 @@
     "use_cases": [
      "game",
      "trailer",
-     "film"
+     "film",
+     "anime",
+     "anime opening",
+     "horror",
+     "horror film",
+     "visualizer",
+     "mixtape",
+     "intro"
     ],
     "lyrical_themes": [
      "illusion",
@@ -1950,7 +2016,9 @@
      "film",
      "game",
      "walkout",
-     "boxing"
+     "boxing",
+     "gaming montage",
+     "montage"
     ],
     "lyrical_themes": [
      "rebellion",
@@ -2032,7 +2100,9 @@
      "film",
      "chill background",
      "coding stream",
-     "background"
+     "background",
+     "romantic",
+     "montage"
     ],
     "lyrical_themes": [
      "romance",
@@ -2077,7 +2147,8 @@
      "cinematic",
      "futuristic",
      "nocturnal",
-     "dystopian"
+     "dystopian",
+     "energetic"
     ],
     "energy_words": [
      "intense",
@@ -2102,7 +2173,9 @@
      "cinematic trailer",
      "game",
      "film",
-     "tv"
+     "tv",
+     "anime",
+     "anime opening"
     ],
     "lyrical_themes": [],
     "lyrical_themes_provenance": "editorial",
