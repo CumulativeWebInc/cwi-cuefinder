@@ -933,7 +933,9 @@
       },
       "editorial_note": null,
       "isrc": "QZDA62200554",
-      "isrc_provenance": "verified"
+      "isrc_provenance": "verified",
+      "mbid": "57392ce8-feba-4797-96cd-638159417cc8",
+      "artist_mbid": "f363d6ae-4322-45bd-8a5c-ad6e0f05f240"
     },
     {
       "track_id": "golden-diamond",
