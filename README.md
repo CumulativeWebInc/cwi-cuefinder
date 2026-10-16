@@ -1,5 +1,7 @@
 # CueFinder — Search like a supervisor thinks.
 
+[![Radio 365 Live](https://radio.cumulativeweb.com/nowplaying.svg)](https://cumulativeweb.com/radio)
+
 AI sync-discovery engine for the CWI catalog: natural-language search over the
 24-track That Boy Hi Hat catalog, built for music supervisors, sync teams, and
 the agents that find music for them.
